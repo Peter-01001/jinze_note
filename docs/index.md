@@ -1,7 +1,3 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
+# jinze note
 
-hero:
-  name: "jinze note"
-  text: "个人学习笔记"
+## just do it and keep going
