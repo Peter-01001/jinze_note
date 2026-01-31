@@ -1,0 +1,70 @@
+# ===================== 基础信息（仅改这3处，其余别动）=====================
+site_name: 我的个人MD笔记  # 替换：你的笔记网站标题
+site_author: 我的昵称      # 替换：你的名字/昵称
+site_url: https://xxx.github.io/  # 替换：xxx改成你的GitHub用户名
+site_description: 高颜值MD笔记网站 | 手机/平板随时访问
+
+# ===================== 核心：Material主题（低版本全兼容，无报错）=====================
+theme:
+  name: material
+  # 低版本兼容图标配置（全版本通用book图标，无模板错误）
+  icon:
+    logo: material/book  # 所有版本都支持的书本图标，颜值适配笔记
+  # 深浅色自动切换（渐变色调，颜值拉满）
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - scheme: slate
+      primary: blue-grey
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+  # 实用高颜值功能（低版本全兼容）
+  features:
+    - navigation.tabs
+    - navigation.hover
+    - navigation.sections
+    - toc.integrate
+    - toc.follow
+    - navigation.top
+    - content.code.copy
+    - content.code.select
+    - images.rounded
+    - search.suggest
+    - search.highlight
+
+# ===================== 插件（自动导航+搜索，无报错）=====================
+plugins:
+  - search  # 内置搜索，必留
+  - awesome-pages  # 自动导航：docs文件夹结构=网站导航，无需手动配置
+
+# ===================== Markdown扩展（美化笔记，低版本兼容）=====================
+markdown_extensions:
+  - toc:
+      permalink: true
+      title: 本文目录
+  - codehilite:
+      linenums: true
+      guess_lang: false
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# ===================== 自定义页脚（纯净专属，无冗余）=====================
+extra:
+  generator: false  # 隐藏MkDocs默认标识
+  footer:
+    text: 基于MkDocs + Material主题搭建 | 个人学习笔记专用
+
+# ===================== 额外样式（颜值优化，无需修改）=====================
+extra_css:
+  - https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css
+site_url: https://Peter-01001.github.io/note/
