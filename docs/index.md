@@ -1,3 +1,3 @@
 # jinze note
 
-## just do it and keep going
+ust do it and keep going
