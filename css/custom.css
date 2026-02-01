@@ -1,7 +1,7 @@
 /* 解决正文靠左问题：向右偏移，调整左右内边距，布局更舒适 */
 .md-content__inner {
-  padding-left: 1rem !important;  /* 左内边距，控制右移幅度，可改（如2rem/4rem） */
-  padding-right: 1rem !important; /* 右内边距，对称美观 */
+  padding-left: 0 !important;  /* 左内边距，控制右移幅度，可改（如2rem/4rem） */
+  padding-right: 0 !important; /* 右内边距，对称美观 */
   max-width: 100% !important;      /* 限制正文最大宽度，避免内容过宽 */
 }
 
