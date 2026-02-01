@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
     
+      <link rel="stylesheet" href="../css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2232,11 +2234,11 @@
 <h3 id="_34">数据定义<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
 <h4 id="_35">模式定义与删除<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <h5 id="_36">模式的定义<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE SCHEMA &lt;模式名&gt; AUTHORIZATION &lt;用户名&gt;   //为用户……定义一个……模式，该用户可操作该模式
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE SCHEMA &lt;模式名&gt; AUTHORIZATION &lt;用户名&gt;   //为用户……定义一个……模式，该用户可操作该模式
 </code></pre></div></td></tr></table></div>
 
 <h5 id="_37">模式的删除<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP SCHEMA &lt;模式名&gt; &lt;CASCADE | RESTRICT&gt;
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP SCHEMA &lt;模式名&gt; &lt;CASCADE | RESTRICT&gt;
 </code></pre></div></td></tr></table></div>
 
 <p>CASCADE | RESTRICT两个参数必须二选一</p>
@@ -2244,7 +2246,7 @@
 <p><strong>RESTRICT(限制)</strong>：如果该模式中定义了下属的数据库对象（表、视图等）则删除失败</p>
 <h4 id="_38">基本表的定义、删除与修改<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
 <h5 id="_39">定义基本表<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2271,7 +2273,7 @@ Sdept CHAR(20)
 
 <h5 id="_40">数据类型<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h5>
 <h5 id="_41">修改基本表<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2285,13 +2287,13 @@ Sdept CHAR(20)
 </code></pre></div></td></tr></table></div>
 
 <h5 id="_42">删除基本表<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP TABLE&lt;表名&gt; [RESTRICT|CASCADE];
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP TABLE&lt;表名&gt; [RESTRICT|CASCADE];
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_43">索引的建立与删除<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
 <p>加快查询速度，主码、unique自动建立索引</p>
 <h5 id="_44">建立索引<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE [UNIQUE][CLUSTER]INDEX&lt;索引名&gt;
@@ -2302,7 +2304,7 @@ ON&lt;表名&gt;(&lt;列名&gt;[&lt;次序&gt;][,&lt;列名&gt;[&lt;次序&gt;]]
 
 <p>一个表里只能建立一个聚簇索引</p>
 <h5 id="_45">修改索引<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ALTER INDEX&lt;旧索引名&gt;RENAME TO&lt;新索引名&gt;;
 
@@ -2310,11 +2312,11 @@ ALTER INDEX SCno RENAME TO SCSno;
 </code></pre></div></td></tr></table></div>
 
 <h5 id="_46">删除索引<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP INDX &lt;索引名&gt;
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP INDX &lt;索引名&gt;
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_47">数据查询<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2330,7 +2332,7 @@ FROM&lt;表名或视图名&gt;[,&lt;表名或视图名&gt;…](&lt;SELECT语句&
 <p>在<strong>where</strong>后in某一值集，满足任意一个值则为满足条件</p>
 <h5 id="_48">字符匹配<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h5>
 <p>若字符串中没有通配符则like和=一摸一样</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[NOT]LIKE&#39;&lt;匹配串&gt;&#39; [ESCAPE&#39;&lt;换码字符&gt;&#39;]
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[NOT]LIKE&#39;&lt;匹配串&gt;&#39; [ESCAPE&#39;&lt;换码字符&gt;&#39;]
 </code></pre></div></td></tr></table></div>
 
 <h6 id="_49">通配符<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h6>
@@ -2340,7 +2342,7 @@ FROM&lt;表名或视图名&gt;[,&lt;表名或视图名&gt;…](&lt;SELECT语句&
 </ul>
 <h6 id="escape">escape<a class="headerlink" href="#escape" title="Permanent link">&para;</a></h6>
 <p>ESCAPE'\ '表示“\”为换码字符。这样匹配串中紧跟在“\”后面的字符“<em>”不 再具有通配符的含义，转义为普通的“</em> ”字符。</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT*
 FROM Course
@@ -2348,7 +2350,7 @@ WHERE Cname LIKE &#39;DB\_%i__&#39; ESCAPE&#39;\&#39;;
 </code></pre></div></td></tr></table></div>
 
 <h5 id="_50">空值查询<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>IS NULL 或 IS NOT NULL
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>IS NULL 或 IS NOT NULL
 </code></pre></div></td></tr></table></div>
 
 <p>is不能用=代替，注意not位置</p>
@@ -2357,7 +2359,7 @@ WHERE Cname LIKE &#39;DB\_%i__&#39; ESCAPE&#39;\&#39;;
 <p>降序：DESC</p>
 <p>默认升序，空值最大</p>
 <h4 id="_51">聚集函数<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2372,7 +2374,7 @@ MIN([DISTINCTIALL]  &lt;列名&gt;)  //求一列值中的最小值
 
 <p>在select后面用</p>
 <h4 id="group-by">GROUP BY<a class="headerlink" href="#group-by" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT Cno,COUNT(Sno)
 FROM SC
@@ -2393,7 +2395,7 @@ GROUP BY Cno;
 <h4 id="_54">集合查询<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
 <h5 id="union">union并操作<a class="headerlink" href="#union" title="Permanent link">&para;</a></h5>
 <p>自动去重</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2409,7 +2411,7 @@ WHERE Cno=&#39;2&#39;;
 </code></pre></div></td></tr></table></div>
 
 <h5 id="intersect">intersect 交操作<a class="headerlink" href="#intersect" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2425,7 +2427,7 @@ WHERE Sage&lt;=19;
 </code></pre></div></td></tr></table></div>
 
 <h5 id="except">except 差操作<a class="headerlink" href="#except" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2446,20 +2448,20 @@ WHERE  Sage&lt;=19;
 <h3 id="_56">数据更新<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h3>
 <h4 id="_57">插入数据<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
 <h5 id="_58">插入元组<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>INSERT INTO&lt;表名&gt;[(&lt;属性列1&gt;[,&lt;属性列2&gt;]… )]
 VALUES(&lt;常量1&gt;[,&lt;常量2&gt;]… );
 </code></pre></div></td></tr></table></div>
 
 <p>属性列不写默认所有列</p>
 <h5 id="_59">修改数据<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>UPDATE &lt;表名&gt;
 SET&lt;列名&gt;=&lt;表达式&gt;[,&lt;列名&gt;=&lt;表达式&gt;]… [WHERE &lt;条件&gt;];
 </code></pre></div></td></tr></table></div>
 
 <h5 id="_60">删除数据<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>DELETE
 FROM&lt;表名&gt;
@@ -2476,7 +2478,7 @@ FROM&lt;表名&gt;
 <h3 id="_62">视图<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
 <p>虚表，不存放数据</p>
 <h4 id="_63">定义视图<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE  VIEW&lt;视图名&gt;[(&lt;列名&gt;[,&lt;列名&gt;]…)]
 AS&lt;子查询&gt;
@@ -2486,7 +2488,7 @@ AS&lt;子查询&gt;
 <p>子查询中不能有distinct或group by</p>
 <p>as后为数据来源</p>
 <h4 id="_64">删除视图<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP VIEW&lt;视图名&gt;[CASCADE];
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP VIEW&lt;视图名&gt;[CASCADE];
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_65">视图查询<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
@@ -2496,7 +2498,7 @@ AS&lt;子查询&gt;
 <h2 id="_67">第四章 数据库安全性<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h2>
 <h3 id="_68">数据库的不安全因素<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
 <h3 id="_69">授权：授予与回收<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2515,11 +2517,11 @@ FROM&lt;用户&gt;[,&lt;用户&gt;]…[CASCADE|RESTRICT];
 
 <h3 id="_70">数据库角色<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
 <h4 id="_71">创建角色<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE ROLE &lt;角色名&gt;；
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE ROLE &lt;角色名&gt;；
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_72">授权角色<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>GRANT &lt;权限&gt;
 ON &lt;对象类型&gt; &lt;对象名&gt;
@@ -2527,7 +2529,7 @@ TO &lt;角色&gt;
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_73">角色授予其他角色或用户<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>GRANT&lt;角色1&gt;[,&lt;角色2&gt;]…
 TO&lt;角色3&gt;[,&lt;用户1&gt;]…
@@ -2535,7 +2537,7 @@ TO&lt;角色3&gt;[,&lt;用户1&gt;]…
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_74">角色权限收回<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>REVOKE&lt;权限&gt;[,&lt;权限&gt;]…
 ON&lt;对象类型&gt;&lt;对象名&gt;
@@ -2543,7 +2545,7 @@ FROM &lt;角色&gt;[,&lt;角色&gt;]…
 </code></pre></div></td></tr></table></div>
 
 <h3 id="_75">审计<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2560,7 +2562,7 @@ ON  SC;
 <p>主码值非空且唯一</p>
 <h3 id="_78">参照完整性<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h3>
 <p>拒绝、级联操作、设置空值</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -2596,12 +2598,12 @@ ON UPDATE CASCADE
 <h3 id="_79">用户定义的完整性<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h3>
 <p>not null、unique和check后面加条件</p>
 <h3 id="_80">给完整性约束命名<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CONSTRAINT&lt;完整性约束条件名&gt;&lt;完整性约束条件&gt;
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CONSTRAINT&lt;完整性约束条件名&gt;&lt;完整性约束条件&gt;
 </code></pre></div></td></tr></table></div>
 
 <h3 id="_81">断言<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h3>
 <h4 id="_82">创建断言<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -2615,7 +2617,7 @@ GROUP by cno)
 </code></pre></div></td></tr></table></div>
 
 <h4 id="_83">删除断言<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP ASSERTION &lt;断言名&gt;
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP ASSERTION &lt;断言名&gt;
 </code></pre></div></td></tr></table></div>
 
 <h3 id="_84">触发器<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h3>
@@ -2623,7 +2625,7 @@ GROUP by cno)
 <h3 id="_86">事务<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h3>
 <p>数据库操作序列，要么都做要么都不做</p>
 <h4 id="_87">定义事务<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<div class="code-block"><table class="code-blocktable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>

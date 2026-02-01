@@ -1,0 +1,22 @@
+/* 解决正文靠左问题：向右偏移，调整左右内边距，布局更舒适 */
+.md-content__inner {
+  padding-left: 3rem !important;  /* 左内边距，控制右移幅度，可改（如2rem/4rem） */
+  padding-right: 2rem !important; /* 右内边距，对称美观 */
+  max-width: 90% !important;      /* 限制正文最大宽度，避免内容过宽 */
+}
+
+/* 强制代码块横向滚动：长代码不再全铺开，出现滚动条 */
+.codehilite, .code-block, .highlight {
+  overflow-x: auto !important;    /* 横向滚动核心属性 */
+  padding: 1rem !important;       /* 代码块内边距，美观 */
+  border-radius: 8px !important; /* 代码块圆角，和主题风格统一 */
+}
+
+/* 代码块滚动条美化（可选，适配主题风格，不影响功能） */
+.codehilite::-webkit-scrollbar, .code-block::-webkit-scrollbar {
+  height: 6px;
+}
+.codehilite::-webkit-scrollbar-thumb, .code-block::-webkit-scrollbar-thumb {
+  background-color: #6366f1;
+  border-radius: 3px;
+}
