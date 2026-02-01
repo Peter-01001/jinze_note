@@ -1,0 +1,2774 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="高颜值MD笔记网站 | 手机/平板随时访问">
+      
+      
+        <meta name="author" content="我的昵称">
+      
+      
+        <link rel="canonical" href="https://Peter-01001.github.io/jinze_note/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/">
+      
+      
+        <link rel="prev" href="../markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>数据库系统 - jinze note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="jinze note" class="md-header__button md-logo" aria-label="jinze note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            jinze note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数据库系统
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Peter-01001/jinze_note/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  jinze note
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Markdown 教程
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  数据库系统
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="jinze note" class="md-nav__button md-logo" aria-label="jinze note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+
+    </a>
+    jinze note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Peter-01001/jinze_note/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    jinze note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown 教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库系统
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="本文目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      本文目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一章 绪论
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一章 绪论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库基本概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库管理系统（软件）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库管理系统（软件）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据操作功能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库系统DBS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库系统DBS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库系统组成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库系统4个特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据模型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据模型2个分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据模型2个分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概念模型（实体……）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逻辑和物理模型（层次、关系……）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据模型的组成要素
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二章 关系数据库
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二章 关系数据库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        属性个数（目、度）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        候选码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非主属性或非码属性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三种关系类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本关系的性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关系的完整性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关系模式与关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关系数据库
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关系数据库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关系数据库的型与值
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关系代数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关系代数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合运算符
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集合运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        并
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        笛卡尔积
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        专门的关系运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="专门的关系运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        投影
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        除
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三章 SQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三章 SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL三级模式结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据定义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模式定义与删除
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模式定义与删除">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模式的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模式的删除
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本表的定义、删除与修改
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本表的定义、删除与修改">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义基本表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改基本表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除基本表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        索引的建立与删除
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="索引的建立与删除">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建立索引
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改索引
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除索引
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        确定集合 in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        字符匹配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="字符匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通配符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        escape
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空值查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ORDER BY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        聚集函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GROUP BY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        嵌套查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="嵌套查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        比较运算符
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#any-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        any all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        not exists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="集合查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        union并操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        intersect 交操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#except" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        except 差操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基于派生表的查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据更新
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        插入数据
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="插入数据">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        插入元组
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        修改数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空值的约束条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视图
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="视图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义视图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除视图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视图查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视图更新
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四章 数据库安全性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四章 数据库安全性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库的不安全因素
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        授权：授予与回收
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库角色
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库角色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建角色
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        授权角色
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        角色授予其他角色或用户
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        角色权限收回
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        审计
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库完整性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库完整性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实体完整性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参照完整性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用户定义的完整性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        给完整性约束命名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        断言
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="断言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建断言
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除断言
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        触发器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库恢复技术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据库恢复技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        事务
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="事务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义事务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        事务的特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_89" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        故障
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="故障">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        事务内部的故障
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_91" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统故障
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        介质故障
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_93" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算机病毒
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_94" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        恢复的实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="恢复的实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_95" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据转储和登记日志文件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据转储和登记日志文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据转存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_97" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        日志文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_98" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        事务故障的恢复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_99" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统故障的恢复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        介质故障的恢复
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        具有检查点的恢复技术
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        并发控制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="并发控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_103" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多任务执行方式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多任务执行方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_104" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        事务串行执行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交叉并发方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_106" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同时并发方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_107" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        并发操作带来数据不一致性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_108" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        封锁
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="封锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_109" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        锁类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        封锁协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        死锁和活锁
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="死锁和活锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        死锁的诊断和解除
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        意向锁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">数据库系统<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">第一章 绪论<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">数据库基本概念<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><strong>数据</strong>（data）：描述事物的符号记录，数据库存储的基本对象。</p>
+<p><strong>数据库</strong>（database）：保存在==计算机内的==、==有组织的==、==可共享的==数据集合。（该笔记主要针对关系型数据库）</p>
+<p><strong>数据库管理系统</strong>（database management system）：对数据库进行各种控制并保持数据==完整性==和==一致性==的<strong>系统软件</strong>。（介于操作系统和用户应用软件之间的数据管理软件）</p>
+<p><strong>数据库系统</strong>（database system）：与数据库相关的一整套系统，包括数据库、软件（dbms和其他软件）、硬件、人员（dba及其他人员）4部分。</p>
+<p><strong>数据库管理员</strong>（data base administrator）</p>
+<h4 id="_4">数据库管理系统（软件）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h5 id="_5">数据操作功能<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<p><strong>数据操作功能</strong>：包括增、删、改、查</p>
+<h4 id="dbs">数据库系统DBS<a class="headerlink" href="#dbs" title="Permanent link">&para;</a></h4>
+<h5 id="_6">数据库系统组成<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p><strong>数据库系统组成</strong>：由数据库、数据库管理系统、应用程序和数据库管理员组成的系统</p>
+<h5 id="4">数据库系统4个特点<a class="headerlink" href="#4" title="Permanent link">&para;</a></h5>
+<p><strong>数据库系统4个特点</strong>：</p>
+<ul>
+<li>数据结构化</li>
+<li>数据共享性强、冗余度低</li>
+<li>由数据库管理系统管理</li>
+<li>数据独立性</li>
+</ul>
+<h3 id="_7">数据模型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="2">数据模型2个分类<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<h5 id="_8">概念模型（实体……）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p><strong>概念模型表示方法</strong>：E-R图</p>
+<ul>
+<li>实体型：矩形</li>
+<li>属性：圈</li>
+<li>联系：菱形</li>
+</ul>
+<h5 id="_9">逻辑和物理模型（层次、关系……）<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<h5 id="_10">数据模型的组成要素<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<ul>
+<li>数据结构</li>
+<li>数据操作</li>
+<li>数据的完整性约束条件</li>
+</ul>
+<h2 id="_11">第二章 关系数据库<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12">关系<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h4 id="_13">属性个数（目、度）<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>目=1 单元关系</p>
+<p>目=2 双元关系</p>
+<h4 id="_14">候选码<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<h4 id="_15">主属性<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<h4 id="_16">非主属性或非码属性<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<h4 id="_17">三种关系类型<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>基本关系：实际的表</li>
+<li>查询表：查询结果对应的表 例如两张表连接所得的表</li>
+<li>视图表：基本表或其他视图导出的表</li>
+</ul>
+<p>查询、视图表是虚表</p>
+<h4 id="_18">基本关系的性质<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>列同质</li>
+<li>不同的的列可出自同一域，不同列名不同</li>
+<li>列顺序可换</li>
+<li>两元组候选码不同（实体完整性）</li>
+<li>行顺序可换</li>
+<li>分量必须是原子值（列不可再分）</li>
+</ul>
+<h4 id="_19">关系的完整性<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>实体完整性（主键唯一标识不能取空值，任意两元组主码值不同）</li>
+<li>参照完整性（外码参照主码或候选码，不必同名）</li>
+<li>用户自定义完整性</li>
+</ul>
+<h3 id="_20">关系模式与关系<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>关系模式静态（有什么属性</p>
+<p>关系动态</p>
+<h3 id="_21">关系数据库<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>关系的集合</p>
+<h4 id="_22">关系数据库的型与值<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<p>型：关系数据库的模式（模子），包括域和在此域上的关系模式（有什么关系</p>
+<p>值：关系数据库具体关系，即关系数据库</p>
+<h3 id="_23">关系代数<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>对关系查询的抽象语言</p>
+<h4 id="_24">集合运算符<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<h5 id="_25">并<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h5>
+<p>R∪S，R和S属性目、域相同，并后重复元组删去</p>
+<h5 id="_26">差<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h5>
+<p>R-S，R和S属性目、域相同，在R不在S的元组</p>
+<h5 id="_27">交<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h5>
+<p>R∩S，R和S属性目、域相同，在R也在S的元组</p>
+<h5 id="_28">笛卡尔积<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h5>
+<p>R×S</p>
+<h4 id="_29">专门的关系运算<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<h5 id="_30">选择<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h5>
+<p>行 去重</p>
+<h5 id="_31">投影<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h5>
+<p>列 去重</p>
+<h5 id="_32">连接<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h5>
+<ul>
+<li>一般连接</li>
+<li>等值连接</li>
+<li>自然连接</li>
+</ul>
+<p>去重</p>
+<h5 id="_33">除<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h5>
+<p>R➗S</p>
+<h2 id="sql">第三章 SQL<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
+<h3 id="sql_1">SQL特点<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>综合统一</li>
+<li>高度非过程化</li>
+<li>面向集合的操作方式</li>
+<li>同一种语法结构提供多种使用方式</li>
+<li>语言简洁，易学易用</li>
+</ul>
+<h3 id="sql_2">SQL三级模式结构<a class="headerlink" href="#sql_2" title="Permanent link">&para;</a></h3>
+<h3 id="_34">数据定义<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<h4 id="_35">模式定义与删除<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<h5 id="_36">模式的定义<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE SCHEMA &lt;模式名&gt; AUTHORIZATION &lt;用户名&gt;   //为用户……定义一个……模式，该用户可操作该模式
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_37">模式的删除<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP SCHEMA &lt;模式名&gt; &lt;CASCADE | RESTRICT&gt;
+</code></pre></div></td></tr></table></div>
+
+<p>CASCADE | RESTRICT两个参数必须二选一</p>
+<p><strong>CASCADE(级联)</strong>：删除模式的同时把该模式中所有的数据库对象删除</p>
+<p><strong>RESTRICT(限制)</strong>：如果该模式中定义了下属的数据库对象（表、视图等）则删除失败</p>
+<h4 id="_38">基本表的定义、删除与修改<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
+<h5 id="_39">定义基本表<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE TABLE&lt;表名&gt;(&lt;列名&gt;&lt;数据类型&gt;[列级完整性约束条件]
+[,&lt;列名&gt;&lt;数据类型&gt;[列级完整性约束条件]]
+……
+[,&lt;表级完整性约束条件&gt;]);
+
+CREATE TABLE Student
+(Sno CHAR(9)PRIMARY KEY,                             /*列级完整性约束条件，Sno 是主码*/
+Sname CHAR(20)UNIQUE,                                 /*Sname 取唯一值*/
+Ssex CHAR(2),
+Sage SMALLINT,
+Sdept CHAR(20)
+);
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_40">数据类型<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h5>
+<h5 id="_41">修改基本表<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>ALTER TABLE&lt;表名&gt;
+[ADD  [COLUMN]&lt;新列名&gt;&lt;数据类型&gt;[完整性约束]]
+[ADD&lt;表级完整性约束&gt;]
+[DROP  [COLUMN]&lt;列名&gt;[CASCADE|RESTRICT]]
+[DROP CONSTRAINT&lt;完整性约束名&gt; [RESTRICT|CASCADE]]
+[ALTER COLUMN&lt;列名&gt;&lt;数据类型&gt;];
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_42">删除基本表<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP TABLE&lt;表名&gt; [RESTRICT|CASCADE];
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_43">索引的建立与删除<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<p>加快查询速度，主码、unique自动建立索引</p>
+<h5 id="_44">建立索引<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE [UNIQUE][CLUSTER]INDEX&lt;索引名&gt;
+ON&lt;表名&gt;(&lt;列名&gt;[&lt;次序&gt;][,&lt;列名&gt;[&lt;次序&gt;]]…);
+
+例： CREATE UNIQUE INDEX SCno ON SC(Sno ASC,Cno DESC);
+</code></pre></div></td></tr></table></div>
+
+<p>一个表里只能建立一个聚簇索引</p>
+<h5 id="_45">修改索引<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>ALTER INDEX&lt;旧索引名&gt;RENAME TO&lt;新索引名&gt;;
+
+ALTER INDEX SCno RENAME TO SCSno;
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_46">删除索引<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP INDX &lt;索引名&gt;
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_47">数据查询<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT    [ALL|DISTINCT]&lt;目标列表达式&gt;[,&lt;目标列表达式&gt;]…
+FROM&lt;表名或视图名&gt;[,&lt;表名或视图名&gt;…](&lt;SELECT语句&gt;)[AS]&lt;别名&gt;
+[WHERE&lt;条件表达式&gt;]
+[GROUPBY&lt;列名1&gt;[HAVING&lt;条件表达式&gt;]]
+[ORDER BY&lt;列名2&gt; [ASC|DESC]];
+</code></pre></div></td></tr></table></div>
+
+<h5 id="in">确定集合 in<a class="headerlink" href="#in" title="Permanent link">&para;</a></h5>
+<p>in</p>
+<p>在<strong>where</strong>后in某一值集，满足任意一个值则为满足条件</p>
+<h5 id="_48">字符匹配<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h5>
+<p>若字符串中没有通配符则like和=一摸一样</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[NOT]LIKE&#39;&lt;匹配串&gt;&#39; [ESCAPE&#39;&lt;换码字符&gt;&#39;]
+</code></pre></div></td></tr></table></div>
+
+<h6 id="_49">通配符<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h6>
+<ul>
+<li><code>%</code>:任意长度的字符串</li>
+<li><code>_</code>：任意单个字符</li>
+</ul>
+<h6 id="escape">escape<a class="headerlink" href="#escape" title="Permanent link">&para;</a></h6>
+<p>ESCAPE'\ '表示“\”为换码字符。这样匹配串中紧跟在“\”后面的字符“<em>”不 再具有通配符的含义，转义为普通的“</em> ”字符。</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT*
+FROM Course
+WHERE Cname LIKE &#39;DB\_%i__&#39; ESCAPE&#39;\&#39;;
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_50">空值查询<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>IS NULL 或 IS NOT NULL
+</code></pre></div></td></tr></table></div>
+
+<p>is不能用=代替，注意not位置</p>
+<h4 id="order-by">ORDER BY<a class="headerlink" href="#order-by" title="Permanent link">&para;</a></h4>
+<p>升序：ASC</p>
+<p>降序：DESC</p>
+<p>默认升序，空值最大</p>
+<h4 id="_51">聚集函数<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>COUNT(*)  //统计元组个数
+COUNT([DISTINCT|ALL]  &lt;列名&gt;)  //统计一列中值的个数
+SUM([DISTINCTIALL]   &lt;列名&gt;)  //计算一列值的总和(此列必须是数值型)
+AVG([DISTINCT|ALL]  &lt;列名&gt;)  //计算一列值的平均值(此列必须是数值型)
+MAX([DISTINCT|ALL]  &lt;列名&gt;)  // 求一列值中的最大值
+MIN([DISTINCTIALL]  &lt;列名&gt;)  //求一列值中的最小值
+</code></pre></div></td></tr></table></div>
+
+<p>在select后面用</p>
+<h4 id="group-by">GROUP BY<a class="headerlink" href="#group-by" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT Cno,COUNT(Sno)
+FROM SC
+GROUP BY Cno;
+</code></pre></div></td></tr></table></div>
+
+<p>select后只能跟group by后的内容或聚集函数</p>
+<p>having对分组后的组进行筛选</p>
+<h4 id="_52">嵌套查询<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h4>
+<p>子查询只能出现在where和having中，order by不能出现在子查询中</p>
+<h5 id="in_1">in<a class="headerlink" href="#in_1" title="Permanent link">&para;</a></h5>
+<h5 id="_53">比较运算符<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h5>
+<h5 id="any-all">any all<a class="headerlink" href="#any-all" title="Permanent link">&para;</a></h5>
+<p>=any 等价于in</p>
+<h5 id="exists">exists<a class="headerlink" href="#exists" title="Permanent link">&para;</a></h5>
+<p>select 后为*</p>
+<h5 id="not-exists">not exists<a class="headerlink" href="#not-exists" title="Permanent link">&para;</a></h5>
+<h4 id="_54">集合查询<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<h5 id="union">union并操作<a class="headerlink" href="#union" title="Permanent link">&para;</a></h5>
+<p>自动去重</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT Sno
+FROM SC
+WHERE Cno=&#39;1
+UNION
+SELECT Sno
+FROM SC
+WHERE Cno=&#39;2&#39;;
+</code></pre></div></td></tr></table></div>
+
+<h5 id="intersect">intersect 交操作<a class="headerlink" href="#intersect" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT*
+FROM Student
+WHERE Sdept=&#39;CS&#39;
+INTERSECT
+SELECT*
+FROM Student
+WHERE Sage&lt;=19;
+</code></pre></div></td></tr></table></div>
+
+<h5 id="except">except 差操作<a class="headerlink" href="#except" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT*
+FROM Student
+WHERE Sdept=&#39;CS&#39;
+EXCEPT
+SELECT*
+FROM Student
+WHERE  Sage&lt;=19;
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_55">基于派生表的查询<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h5>
+<p>派生表子查询出现在from语句后而不是where后</p>
+<p>as起名，可省略但是必须起名字，派生表的属性如果是操作后的需要起名否则对应原表</p>
+<h3 id="_56">数据更新<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h3>
+<h4 id="_57">插入数据<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
+<h5 id="_58">插入元组<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>INSERT INTO&lt;表名&gt;[(&lt;属性列1&gt;[,&lt;属性列2&gt;]… )]
+VALUES(&lt;常量1&gt;[,&lt;常量2&gt;]… );
+</code></pre></div></td></tr></table></div>
+
+<p>属性列不写默认所有列</p>
+<h5 id="_59">修改数据<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>UPDATE &lt;表名&gt;
+SET&lt;列名&gt;=&lt;表达式&gt;[,&lt;列名&gt;=&lt;表达式&gt;]… [WHERE &lt;条件&gt;];
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_60">删除数据<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>DELETE
+FROM&lt;表名&gt;
+[WHERE&lt;条件&gt;];
+</code></pre></div></td></tr></table></div>
+
+<h5 id="_61">空值的约束条件<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h5>
+<ul>
+<li>not null不能为空</li>
+<li>码不能为空</li>
+<li>unique不能为空</li>
+</ul>
+<p>空值与另一个值(包括另一个空值)的比较运算的结果为 UNKNOWN</p>
+<h3 id="_62">视图<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
+<p>虚表，不存放数据</p>
+<h4 id="_63">定义视图<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE  VIEW&lt;视图名&gt;[(&lt;列名&gt;[,&lt;列名&gt;]…)]
+AS&lt;子查询&gt;
+[WITH CHECK OPTION];
+</code></pre></div></td></tr></table></div>
+
+<p>子查询中不能有distinct或group by</p>
+<p>as后为数据来源</p>
+<h4 id="_64">删除视图<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP VIEW&lt;视图名&gt;[CASCADE];
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_65">视图查询<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
+<p>查询时，如果在建立视图的时候加上了with check option，则查询的是带上建立时条件的</p>
+<h4 id="_66">视图更新<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h4>
+<p>实际上是对基本表的更新</p>
+<h2 id="_67">第四章 数据库安全性<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h2>
+<h3 id="_68">数据库的不安全因素<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
+<h3 id="_69">授权：授予与回收<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>GRANT&lt;权限&gt;[,&lt;权限&gt;]…
+ON&lt;对象类型&gt;&lt;对象名&gt;[&lt;对象类型&gt;&lt;对象名&gt;]…
+TO&lt;用户&gt;[&lt;用户&gt;]…
+[WITH GRANT OPTION];
+
+REVOKE&lt;权限&gt;[,&lt;权限&gt;]…
+ON&lt;对象类型&gt;&lt;对象名&gt;[,&lt;对象类型&gt;&lt;对象名&gt;]…
+FROM&lt;用户&gt;[,&lt;用户&gt;]…[CASCADE|RESTRICT];
+</code></pre></div></td></tr></table></div>
+
+<h3 id="_70">数据库角色<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
+<h4 id="_71">创建角色<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE ROLE &lt;角色名&gt;；
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_72">授权角色<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>GRANT &lt;权限&gt;
+ON &lt;对象类型&gt; &lt;对象名&gt;
+TO &lt;角色&gt;
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_73">角色授予其他角色或用户<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>GRANT&lt;角色1&gt;[,&lt;角色2&gt;]…
+TO&lt;角色3&gt;[,&lt;用户1&gt;]…
+[WITH ADMIN OPTION]
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_74">角色权限收回<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>REVOKE&lt;权限&gt;[,&lt;权限&gt;]…
+ON&lt;对象类型&gt;&lt;对象名&gt;
+FROM &lt;角色&gt;[,&lt;角色&gt;]…
+</code></pre></div></td></tr></table></div>
+
+<h3 id="_75">审计<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>AUDIT ALTER,UPDATE
+ON  SC;
+
+NO AUDIT ALTER,UPDATE
+ON  SC;
+</code></pre></div></td></tr></table></div>
+
+<h2 id="_76">数据库完整性<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h2>
+<p>正确性和相容性</p>
+<h3 id="_77">实体完整性<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h3>
+<p>主码值非空且唯一</p>
+<h3 id="_78">参照完整性<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h3>
+<p>拒绝、级联操作、设置空值</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE TABLE SC
+(Sno CHAR(9),
+Cno CHAR(4),
+Grade SMALLINT,
+PRIMARY KEY(Sno,Cno),/*在表级定义实体完整性，Sno 、Cno都不能取空值*/
+FOREIGN KEY(Sno)REFERENCES Student(Sno)    /*在表级定义参照完整性*/ 
+ON DELETE CASCADE
+/*当删除Student表中的元组时，级联删除SC 表中相应的元组*/
+ON UPDATE CASCADE,
+/*当更新Student表中的sno 时，级联更新SC 表中相应的元组*/
+FOREIGN KEY(Cno)REFERENCES Course(Cno)   /*在表级定义参照完整性*/
+ON DELETE NO ACTION
+/*当删除Course 表中的元组造成与SC 表不一致时，拒绝删除*/
+ON UPDATE CASCADE
+/*当更新Course 表中的cno 时，级联更新SC 表中相应的元组*/
+);
+</code></pre></div></td></tr></table></div>
+
+<h3 id="_79">用户定义的完整性<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h3>
+<p>not null、unique和check后面加条件</p>
+<h3 id="_80">给完整性约束命名<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>CONSTRAINT&lt;完整性约束条件名&gt;&lt;完整性约束条件&gt;
+</code></pre></div></td></tr></table></div>
+
+<h3 id="_81">断言<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h3>
+<h4 id="_82">创建断言<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>CREATE ASSERTION &lt;断言名&gt;&lt;CHECK 子句&gt;
+CREATE ASSERTION ASSE_SC_CNUM1
+CHECK(60&gt;=ALL(SELECT  count(*)      /*此断言的谓词，涉及聚集操作count*/
+FROM SC                   /*和分组函数group by的SQL 语句*/
+GROUP by cno)
+);
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_83">删除断言<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>DROP ASSERTION &lt;断言名&gt;
+</code></pre></div></td></tr></table></div>
+
+<h3 id="_84">触发器<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h3>
+<h2 id="_85">数据库恢复技术<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h2>
+<h3 id="_86">事务<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h3>
+<p>数据库操作序列，要么都做要么都不做</p>
+<h4 id="_87">定义事务<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>BEGIN TRANSACTION;
+SQL 语句;
+COMMIT;
+
+BEGIN TRANSACTION;
+SQL 语句;
+ROLLBACK;
+</code></pre></div></td></tr></table></div>
+
+<h4 id="_88">事务的特性<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h4>
+<ul>
+<li>原子性</li>
+<li>一致性</li>
+<li>隔离性</li>
+<li>持续性</li>
+</ul>
+<h3 id="_89">故障<a class="headerlink" href="#_89" title="Permanent link">&para;</a></h3>
+<h4 id="_90">事务内部的故障<a class="headerlink" href="#_90" title="Permanent link">&para;</a></h4>
+<p>非预期</p>
+<h4 id="_91">系统故障<a class="headerlink" href="#_91" title="Permanent link">&para;</a></h4>
+<h4 id="_92">介质故障<a class="headerlink" href="#_92" title="Permanent link">&para;</a></h4>
+<h4 id="_93">计算机病毒<a class="headerlink" href="#_93" title="Permanent link">&para;</a></h4>
+<h3 id="_94">恢复的实现<a class="headerlink" href="#_94" title="Permanent link">&para;</a></h3>
+<h4 id="_95">数据转储和登记日志文件<a class="headerlink" href="#_95" title="Permanent link">&para;</a></h4>
+<h5 id="_96">数据转存<a class="headerlink" href="#_96" title="Permanent link">&para;</a></h5>
+<p><strong>静态转储</strong>：无运行事务时转储</p>
+<p><strong>动态转储</strong>：转储与事务并发</p>
+<p><strong>海量转储</strong>：每次转储所有的数据</p>
+<p><strong>增量转储</strong>：只转储更新过的数据</p>
+<h5 id="_97">日志文件<a class="headerlink" href="#_97" title="Permanent link">&para;</a></h5>
+<p>开始、结束标记和更新操作</p>
+<p><strong>记录</strong>：事务标识、操作类型、操作对象、更新前数据的旧值、更新后数据的新值</p>
+<p><strong>数据块</strong>：事务标识、被更新的数据块</p>
+<p>事务故障和系统故障恢复必须用日志文件，动态转储必须用、静态可以用</p>
+<p><strong>登记</strong>：登记次序按照事务发生顺序，先写日志后写数据库</p>
+<h4 id="_98">事务故障的恢复<a class="headerlink" href="#_98" title="Permanent link">&para;</a></h4>
+<p>反向扫描日志文件</p>
+<h4 id="_99">系统故障的恢复<a class="headerlink" href="#_99" title="Permanent link">&para;</a></h4>
+<p>已提交的重做，未完成的撤销</p>
+<h4 id="_100">介质故障的恢复<a class="headerlink" href="#_100" title="Permanent link">&para;</a></h4>
+<p>重装备份，装入日志副本</p>
+<p>日志中完成的事务重新</p>
+<h3 id="_101">具有检查点的恢复技术<a class="headerlink" href="#_101" title="Permanent link">&para;</a></h3>
+<h2 id="_102">并发控制<a class="headerlink" href="#_102" title="Permanent link">&para;</a></h2>
+<h3 id="_103">多任务执行方式<a class="headerlink" href="#_103" title="Permanent link">&para;</a></h3>
+<h4 id="_104">事务串行执行<a class="headerlink" href="#_104" title="Permanent link">&para;</a></h4>
+<p>一个一个来</p>
+<h4 id="_105">交叉并发方式<a class="headerlink" href="#_105" title="Permanent link">&para;</a></h4>
+<h4 id="_106">同时并发方式<a class="headerlink" href="#_106" title="Permanent link">&para;</a></h4>
+<h3 id="_107">并发操作带来数据不一致性<a class="headerlink" href="#_107" title="Permanent link">&para;</a></h3>
+<ul>
+<li>丢失修改</li>
+<li>不可重复读</li>
+<li>读“脏”数据</li>
+</ul>
+<h3 id="_108">封锁<a class="headerlink" href="#_108" title="Permanent link">&para;</a></h3>
+<p>事务请求加锁</p>
+<h4 id="_109">锁类型<a class="headerlink" href="#_109" title="Permanent link">&para;</a></h4>
+<ul>
+<li>排他锁（x）：写锁</li>
+<li>共享锁（s）：读锁</li>
+</ul>
+<h4 id="_110">封锁协议<a class="headerlink" href="#_110" title="Permanent link">&para;</a></h4>
+<p>一级:写数据加x，读数据不用加锁</p>
+<p>二级：写数据加x，读数据加s锁，读完数据解s锁</p>
+<p>三级：写数据加x，读数据加s锁，事务结束解s锁</p>
+<p>x锁事务结束后解锁</p>
+<h4 id="_111">死锁和活锁<a class="headerlink" href="#_111" title="Permanent link">&para;</a></h4>
+<p><strong>活锁</strong>：某一事务长期等待</p>
+<p><strong>死锁</strong>：一直等待</p>
+<ul>
+<li>一次封锁法</li>
+<li>顺序封锁法</li>
+</ul>
+<h5 id="_112">死锁的诊断和解除<a class="headerlink" href="#_112" title="Permanent link">&para;</a></h5>
+<ul>
+<li>超时法</li>
+<li>等待图法 出现回路说明出现死锁</li>
+</ul>
+<h4 id="_113">意向锁<a class="headerlink" href="#_113" title="Permanent link">&para;</a></h4>
+<ul>
+<li>IS锁</li>
+<li>IX锁</li>
+<li>SIX锁</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.hover", "navigation.sections", "toc.integrate", "toc.follow", "navigation.top", "content.code.copy", "content.code.select", "images.rounded", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
