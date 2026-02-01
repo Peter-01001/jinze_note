@@ -1,13 +1,13 @@
 # ===================== 基础信息（仅改这3处，其余别动）=====================
 site_name: jinze note  # 替换：你的笔记网站标题
 site_author: 我的昵称      # 替换：你的名字/昵称
-site_url: https://Peter-01001.github.io/  # 替换：xxx改成你的GitHub用户名
+site_url: https://Peter-01001.github.io/jinze_note/  # 正确仓库地址，已去重
 site_description: 高颜值MD笔记网站 | 手机/平板随时访问
-repo_url: https://github.com/Peter-01001/jinze_note/  # 替换：xxx改成你的GitHub仓库地址
+repo_url: https://github.com/Peter-01001/jinze_note/  # 你的GitHub仓库地址
 # ===================== 核心：Material主题（低版本全兼容，无报错）=====================
 theme:
   name: material
-  # 低版本兼容图标配置（全版本通用book图标，无模板错误）
+  # 低版本兼容图标配置（全版本通用book图标，颜值适配笔记）
   icon:
     logo: material/book  # 所有版本都支持的书本图标，颜值适配笔记
   # 深浅色自动切换（渐变色调，颜值拉满）
@@ -43,7 +43,7 @@ plugins:
   - search  # 内置搜索，必留
   - awesome-pages  # 自动导航：docs文件夹结构=网站导航，无需手动配置
 
-# ===================== Markdown扩展（美化笔记，低版本兼容）=====================
+# ===================== Markdown扩展（美化笔记+代码块滚动，低版本兼容）=====================
 markdown_extensions:
   - toc:
       permalink: true
@@ -51,9 +51,10 @@ markdown_extensions:
   - codehilite:
       linenums: true
       guess_lang: false
+      css_class: code-block  # 新增：为代码块添加专属类，方便CSS控制
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences  # 支持代码块嵌套，确保长代码滚动生效
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -64,7 +65,7 @@ extra:
   footer:
     text: 基于MkDocs + Material主题搭建 | 个人学习笔记专用
 
-# ===================== 额外样式（颜值优化，无需修改）=====================
+# ===================== 额外样式（字体图标+自定义正文/代码块样式，必留）=====================
 extra_css:
   - https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css
-site_url: https://Peter-01001.github.io/jinze_note/
+  - css/custom.css  # 新增：引用自定义样式文件（解决正文靠左+代码滚动）
