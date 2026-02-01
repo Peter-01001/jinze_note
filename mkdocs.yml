@@ -3,7 +3,7 @@ site_name: jinze note  # 替换：你的笔记网站标题
 site_author: 我的昵称      # 替换：你的名字/昵称
 site_url: https://Peter-01001.github.io/  # 替换：xxx改成你的GitHub用户名
 site_description: 高颜值MD笔记网站 | 手机/平板随时访问
-repo_url: https://github.com/Peter-01001/note/  # 替换：xxx改成你的GitHub仓库地址
+repo_url: https://github.com/Peter-01001/jinze_note/  # 替换：xxx改成你的GitHub仓库地址
 # ===================== 核心：Material主题（低版本全兼容，无报错）=====================
 theme:
   name: material
