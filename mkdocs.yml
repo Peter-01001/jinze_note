@@ -19,7 +19,7 @@ theme:
         icon: material/weather-sunny
         name: 切换到深色模式
     - scheme: slate
-      primary: blue-grey
+      primary: grey
       accent: teal
       toggle:
         icon: material/weather-night
