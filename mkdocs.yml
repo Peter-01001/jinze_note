@@ -49,7 +49,7 @@ markdown_extensions:
       permalink: true
       title: 本文目录
   - codehilite:
-      linenums: true
+      linenums: false
       guess_lang: false
       css_class: code-block  # 新增：为代码块添加专属类，方便CSS控制
   - admonition
