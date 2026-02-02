@@ -695,13 +695,13 @@
 <h3 id="_4">线性函数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><strong>线性函数</strong>：$y = wx + b$</p>
+<p><strong>线性函数</strong>：<span class="arithmatex">\(y = wx + b\)</span></p>
 </li>
 <li>
-<p><strong>$w$</strong>：权重</p>
+<p><strong><span class="arithmatex">\(w\)</span></strong>：权重</p>
 </li>
 <li>
-<p><strong>$b$</strong>：偏置</p>
+<p><strong><span class="arithmatex">\(b\)</span></strong>：偏置</p>
 </li>
 </ul>
 <p>其中权重和偏置随机初始化或使用预训练的参数，并在训练过程中不断调整</p>
@@ -709,15 +709,15 @@
 <p>线性函数的输出结果是一个向量，softmax分类器将向量映射到概率分布，即每个类别的概率</p>
 <ul>
 <li>
-<p><strong>softmax激活函数</strong>：$y_i = \frac{e^{w_i x + b_i}}{\sum_{j=1}^n e^{w_j x + b_j}}$</p>
+<p><strong>softmax激活函数</strong>：<span class="arithmatex">\(y_i = \frac{e^{w_i x + b_i}}{\sum_{j=1}^n e^{w_j x + b_j}}\)</span></p>
 </li>
 <li>
-<p><strong>sigmoid激活函数</strong>：$y = \frac{1}{1 + e^{-x}}$（不属于softmax分类器）</p>
+<p><strong>sigmoid激活函数</strong>：<span class="arithmatex">\(y = \frac{1}{1 + e^{-x}}\)</span>（不属于softmax分类器）</p>
 </li>
 </ul>
 <p>其中softmax用于多分类问题，sigmoid用于二分类问题</p>
 <ul>
-<li><strong>交叉熵损失函数</strong>：$Loss = -\sum_{i=1}^n y_i log(y_i)$</li>
+<li><strong>交叉熵损失函数</strong>：<span class="arithmatex">\(Loss = -\sum_{i=1}^n y_i log(y_i)\)</span></li>
 </ul>
 <p>概率为1时没有损失，概率越小损失越大</p>
 <ul>
@@ -732,11 +732,11 @@
 <h3 id="_6">反向传播<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>由损失更新权重和偏置</p>
 <ul>
-<li><strong>梯度下降</strong>：$w = w - \alpha \frac{\partial Loss}{\partial w}$</li>
+<li><strong>梯度下降</strong>：<span class="arithmatex">\(w = w - \alpha \frac{\partial Loss}{\partial w}\)</span></li>
 </ul>
 <p>向损失小的方向更新</p>
 <ul>
-<li><strong>动量</strong>：$w = w - \alpha \frac{\partial Loss}{\partial w} + \beta \frac{\partial Loss}{\partial w}$</li>
+<li><strong>动量</strong>：<span class="arithmatex">\(w = w - \alpha \frac{\partial Loss}{\partial w} + \beta \frac{\partial Loss}{\partial w}\)</span></li>
 </ul>
 <p>每次迭代独立，但使用动量可加快收敛速度</p>
 <ul>
@@ -798,6 +798,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
