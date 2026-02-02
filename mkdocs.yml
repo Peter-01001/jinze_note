@@ -52,6 +52,8 @@ markdown_extensions:
       linenums: false
       guess_lang: false
       css_class: code-block  # 新增：为代码块添加专属类，方便CSS控制
+  - pymdownx.arithmatex:  # 新增：支持LaTeX公式渲染
+      generic: true  # 兼容行内/块级公式写法
   - admonition
   - pymdownx.details
   - pymdownx.superfences  # 支持代码块嵌套，确保长代码滚动生效
@@ -69,3 +71,5 @@ extra:
 extra_css:
   - https://cdn.jsdelivr.net/npm/font-awesome@6.0.0/css/all.min.css
   - css/custom.css  # 新增：引用自定义样式文件（解决正文靠左+代码滚动）
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # MathJax CDN（移动端兼容）
