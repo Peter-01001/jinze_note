@@ -13,7 +13,7 @@ theme:
   # 深浅色自动切换（渐变色调，颜值拉满）
   palette:
     - scheme: default
-      primary: indigo
+      primary: blue
       accent: blue
       toggle:
         icon: material/weather-sunny
