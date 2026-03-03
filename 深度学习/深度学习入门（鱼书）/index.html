@@ -783,6 +783,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        异或门
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -790,6 +801,150 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        神经网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="神经网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出层激活函数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="输出层激活函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小口诀
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sigmoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sigmoid激活函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ReLU函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵乘法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        符号确认
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码小节
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        恒等函数和softmax函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        输出层神经元数量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        神经网络的学习
+      
+    </span>
+  </a>
   
 </li>
       
@@ -919,6 +1074,8 @@ y = \begin{cases}
 1 &amp; (b + w_1 x_1 + w_2 x_2 &gt; 0)
 \end{cases}
 \]</div>
+<p>b是被称为偏置的参数，用于控制神经元被激活的容易程度；而w1和w2
+是表示各个信号的权重的参数，用于控制各个信号的重要性。</p>
 <div class="highlight"><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="c1"># 输入</span>
     <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span> <span class="c1"># 权重</span>
@@ -930,6 +1087,152 @@ y = \begin{cases}
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
     <span class="o">-</span><span class="mf">0.19999999999999996</span> <span class="c1"># 大约为-0.2（由浮点小数造成的运算误差）</span>
 </code></pre></div>
+<h4 id="_9">异或门<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>异或门无法用感知机实现</li>
+</ul>
+<h2 id="_10">神经网络<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="_11">输出层激活函数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>回归：可以<strong>不用激活</strong></li>
+<li>分类：<strong>必须用激活</strong></li>
+</ul>
+<h4 id="_12">小口诀<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>回归 → 不用激活</li>
+<li>二分类 → sigmoid</li>
+<li>多分类 → softmax</li>
+<li>多标签 → sigmoid</li>
+</ul>
+<h3 id="sigmoid">sigmoid激活函数<a class="headerlink" href="#sigmoid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>激活函数必须是非线性</li>
+</ul>
+<h3 id="relu">ReLU函数<a class="headerlink" href="#relu" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+h(x) = \begin{cases}
+x &amp; (x &gt; 0) \\
+0 &amp; (x \le 0)
+\end{cases}
+\]</div>
+<h3 id="_13">矩阵乘法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>在 NumPy 里：</p>
+<ul>
+<li>
+<p><code>@</code> = 矩阵乘法（数学上的矩阵乘）</p>
+</li>
+<li>
+<p><code>*</code> = 逐元素相乘（不是矩阵乘法）</p>
+</li>
+</ul>
+<h3 id="_14">符号确认<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(w_{12}^{(1)}\)</span>表示前一层的第2个神经元<span class="arithmatex">\(x_2\)</span>到后一层的第1个神经元$
+a_{1}^{(1)}
+$的权重</p>
+</li>
+<li>
+<p><span class="arithmatex">\(b_1^{(1)}\)</span>表示第1层的第1个神经元<span class="arithmatex">\(a_{1}^{(1)}\)</span>的偏置</p>
+</li>
+</ul>
+<h3 id="_15">代码小节<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">init_network</span><span class="p">():</span>
+ <span class="n">network</span> <span class="o">=</span> <span class="p">{}</span>
+ <span class="n">network</span><span class="p">[</span><span class="s1">&#39;W1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]])</span>
+ <span class="n">network</span><span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+ <span class="n">network</span><span class="p">[</span><span class="s1">&#39;W2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]])</span>
+ <span class="n">network</span><span class="p">[</span><span class="s1">&#39;b2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span>
+ <span class="n">network</span><span class="p">[</span><span class="s1">&#39;W3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]])</span>
+ <span class="n">network</span><span class="p">[</span><span class="s1">&#39;b3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span>
+ <span class="k">return</span> <span class="n">network</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+ <span class="n">W1</span><span class="p">,</span> <span class="n">W2</span><span class="p">,</span> <span class="n">W3</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;W1&#39;</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;W2&#39;</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;W3&#39;</span><span class="p">]</span>
+ <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">b3</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;b1&#39;</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;b2&#39;</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;b3&#39;</span><span class="p">]</span>
+ <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b1</span>
+ <span class="n">z1</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+ <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span>
+ <span class="n">z2</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+ <span class="n">a3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z2</span><span class="p">,</span> <span class="n">W3</span><span class="p">)</span> <span class="o">+</span> <span class="n">b3</span>
+ <span class="n">y</span> <span class="o">=</span> <span class="n">identity_function</span><span class="p">(</span><span class="n">a3</span><span class="p">)</span>
+ <span class="k">return</span> <span class="n">y</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">init_network</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">forward</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># [ 0.31682708 0.69627909]</span>
+</code></pre></div>
+<h3 id="_16">问题分类<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>机器学习的问题大致可以分为分类问题和回归问题</li>
+</ul>
+<h3 id="softmax">恒等函数和softmax函数<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>恒等函数</strong>：恒等函数会将输入按原样输出，对于输入的信息，不加以任何改动地直
+接输出</p>
+</li>
+<li>
+<p><strong>softmax函数</strong>：softmax函数将输入的向量转换成概率分布，即将向量中的每个数字都转换为0到1之间的实数，并且所有数的总和为1</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+y_k &amp;= \frac{\exp(a_k)}{\sum_{i=1}^n \exp(a_i)}
+    = \frac{C \exp(a_k)}{C \sum_{i=1}^n \exp(a_i)} \\
+   &amp;= \frac{\exp(a_k + \log C)}{\sum_{i=1}^n \exp(a_i + \log C)} \\
+   &amp;= \frac{\exp(a_k + C')}{\sum_{i=1}^n \exp(a_i + C')}
+\end{align*}
+\]</div>
+<p>其中$ a_k$为输入信号</p>
+<p>```python
+def softmax(a):
+    c = np.max(a)
+    exp_a = np.exp(a - c) # 溢出对策
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a</p>
+<div class="code-block"><pre><span></span><code>return y
+</code></pre></div>
+
+<p>```</p>
+<h3 id="_17">输出层神经元数量<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>输出层的神经元数量需要根据待解决的问题来决定</li>
+<li>分类问题：输出层的神经元数量需要与分类的类别数相同</li>
+</ul>
+<h2 id="_18">神经网络的学习<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>学习</strong>：从训练数据中自动获取最优权重参数的过程</p>
+</li>
+<li>
+<p><strong>泛化能力</strong>：处理未被观察过的数据（不包含在训练数据中的数据）的能力</p>
+</li>
+<li>
+<p><strong>过拟合</strong>：只对某个数据集过度拟合的状态</p>
+</li>
+<li>
+<p><strong>损失函数</strong>：神经网络以某个指标为线索寻找最优权重参数，可以是任何函数但一般用均方误差和交叉熵误差等</p>
+</li>
+<li>
+<p><strong>均方误差</strong>：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+E = \frac{1}{2} \sum_{k} (y_k - t_k)^2
+\]</div>
+<p>k：数据的维度</p>
+<ul>
+<li>
+<p><strong>one-hot表示</strong>：将正确解标签表示为1，其他标签表示为0的表示方法</p>
+</li>
+<li>
+<p><strong>交叉熵误差</strong>：</p>
+</li>
+</ul>
+<div class="arithmatex">\[E = - \sum_{k} t_k \log(y_k) \]</div>
+<ul>
+<li><strong>mini-batch学习</strong>：从训练数据中随机选择一部分数据进行学习的方法</li>
+</ul>
 
 
 
