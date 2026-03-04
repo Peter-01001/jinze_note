@@ -659,6 +659,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        广播功能
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -677,7 +688,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         绘制简单图形
@@ -705,7 +716,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         张量：张量，多维数组
@@ -864,8 +875,16 @@
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">arr1</span> <span class="o">+</span> <span class="n">arr2</span><span class="p">)</span>  <span class="c1"># 逐元素相加：[[2,3],[4,5]]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">arr1</span> <span class="o">@</span> <span class="n">arr2</span><span class="p">)</span>  <span class="c1"># 矩阵乘法（和torch.matmul一致）</span>
 </code></pre></div>
+<h3 id="_3">广播功能<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>标量和NumPy数组之间进行运算，则标量会和NumPy数组的各个元素进行运算</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">1.0</span> <span class="o">+</span> <span class="n">t</span>
+<span class="n">array</span><span class="p">([</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">t</span>
+<span class="n">array</span><span class="p">([</span> <span class="mf">1.</span> <span class="p">,</span> <span class="mf">0.5</span> <span class="p">,</span> <span class="mf">0.33333333</span><span class="p">])</span>
+</code></pre></div>
 <h2 id="matplotlib">matplotlib<a class="headerlink" href="#matplotlib" title="Permanent link">&para;</a></h2>
-<h3 id="_3">绘制简单图形<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_4">绘制简单图形<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="c1"># 生成数据</span>
@@ -877,7 +896,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="tensor">tensor操作<a class="headerlink" href="#tensor" title="Permanent link">&para;</a></h2>
-<h3 id="_4">张量：张量，多维数组<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_5">张量：张量，多维数组<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>0 维张量：单个数字（如 5）→ 标量</li>
 <li>1 维张量：[1,2,3] → 向量（比如一个人的身高、体重、年龄）</li>
