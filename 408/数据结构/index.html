@@ -857,10 +857,60 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="大O表示法（Big O Notation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        大O表示法的运算规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见时间复杂度的阶数比较
+      
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时间复杂度的三种情况
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算法的空间复杂度
+      
+    </span>
+  </a>
   
 </li>
         
@@ -1166,6 +1216,7 @@
 <p><strong>算法</strong>（Algorithm）：是对特定问题求解步骤的一种描述，它是指令的有限序列，其中的每条指令表示一个或多个操作 &emsp;<strong>即求解问题的步骤</strong></p>
 <h4 id="_19">算法的时间复杂度<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p><strong>时间复杂度</strong>：评估算法时间开销</p>
+<p>$ T(n) $:时间开销</p>
 <h5 id="obig-o-notation">大O表示法（Big O Notation）<a class="headerlink" href="#obig-o-notation" title="Permanent link">&para;</a></h5>
 <p>大O表示“同阶”，同等数量级。即：当 <span class="arithmatex">\(n \to \infty\)</span> 时，二者之比为常数</p>
 <p>示例：</p>
@@ -1180,6 +1231,42 @@
 <p><span class="arithmatex">\(T_3(n) = O(n^3)\)</span></p>
 </li>
 </ul>
+<h6 id="o">大O表示法的运算规则<a class="headerlink" href="#o" title="Permanent link">&para;</a></h6>
+<ul>
+<li>a）加法规则</li>
+</ul>
+<p><span class="arithmatex">\(T(n) = T_1(n) + T_2(n) = O(f(n)) + O(g(n)) = O(\max(f(n), g(n)))\)</span></p>
+<blockquote>
+<p>多项相加，只保留最高阶的项，且系数变为 1</p>
+</blockquote>
+<ul>
+<li>b）乘法规则</li>
+</ul>
+<p><span class="arithmatex">\(T(n) = T_1(n) \times T_2(n) = O(f(n)) \times O(g(n)) = O(f(n) \times g(n))\)</span></p>
+<blockquote>
+<p>多项相乘，都保留</p>
+</blockquote>
+<p><strong>Eg：</strong> <span class="arithmatex">\(T_3(n) = n^3 + n^2\log_2n\)</span></p>
+<h6 id="_20">常见时间复杂度的阶数比较<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h6>
+<div class="arithmatex">\[
+O(1) &lt; O(\log_2 n) &lt; O(n) &lt; O(n\log_2 n) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n) &lt; O(n!) &lt; O(n^n)
+\]</div>
+<blockquote>
+<p>常对幂指阶</p>
+</blockquote>
+<h5 id="_21">时间复杂度的三种情况<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h5>
+<p>1.<strong>最坏时间复杂度</strong>：最坏情况下算法的时间复杂度</p>
+<p>2.<strong>平均时间复杂度</strong>：所有输入示例等概率出现的情况下，算法的期望运行时间</p>
+<p>3.<strong>最好时间复杂度</strong>：最好情况下算法的时间复杂度</p>
+<h4 id="_22">算法的空间复杂度<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>空间复杂度（Space Complexity）</strong>：无论问题规模怎么变，算法运行所需的内存空间都是固定的常量，算法空间复杂度为：</li>
+</ul>
+<p>$$
+S(n) = O(1)
+$$
+注：S 表示 "Space"（对应时间复杂度 <span class="arithmatex">\(T(n)\)</span>，T 表示 "Time"）</p>
+<p><strong>算法原地工作</strong>：算法所需内存空间为常量</p>
 
 
 
