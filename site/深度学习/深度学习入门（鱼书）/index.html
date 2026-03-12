@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -932,13 +932,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正规化
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     <span class="md-ellipsis">
       
         神经网络的学习
@@ -1116,6 +1127,7 @@ x &amp; (x &gt; 0) \\
 0 &amp; (x \le 0)
 \end{cases}
 \]</div>
+<p><img alt="alt text" src="../image-1.png" /></p>
 <h3 id="_13">矩阵乘法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>在 NumPy 里：</p>
 <ul>
@@ -1184,7 +1196,7 @@ y_k &amp;= \frac{\exp(a_k)}{\sum_{i=1}^n \exp(a_i)}
    &amp;= \frac{\exp(a_k + C')}{\sum_{i=1}^n \exp(a_i + C')}
 \end{align*}
 \]</div>
-<p>其中$ a_k$为输入信号</p>
+<p>其中<span class="arithmatex">\(a_k\)</span>为输入信号</p>
 <p>```python
 def softmax(a):
     c = np.max(a)
@@ -1200,7 +1212,11 @@ def softmax(a):
 <li>输出层的神经元数量需要根据待解决的问题来决定</li>
 <li>分类问题：输出层的神经元数量需要与分类的类别数相同</li>
 </ul>
-<h2 id="_18">神经网络的学习<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="_18">正规化<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>正规化</strong>：把数据限定到某个范围内的处理</li>
+</ul>
+<h2 id="_19">神经网络的学习<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>学习</strong>：从训练数据中自动获取最优权重参数的过程</p>
