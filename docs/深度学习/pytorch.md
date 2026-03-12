@@ -1,5 +1,23 @@
 # pytorch
 
+## python基础
+
+### pickle
+
++ **pickle**：对象序列化（Serialization）和反序列化（Deserialization）的内置工具
+
+### dict
+
+只想拿名字？用 disease_counts.keys()
+只想拿数值？用 disease_counts.values()
+全都要？用 disease_counts.items()
+
+## 学习工具
+
++ dir() &emsp;#打开，看见
+
++ help() &emsp;  #说明书
+
 ## numpy
 
 Numpy 是 Python 处理数值数组的核心库，PyTorch 张量的操作几乎和 Numpy 一致，先学最核心的数组操作。
@@ -89,4 +107,40 @@ print(x)
 创建一个全 0 的张量，并指定数据类型为 long
 x = torch.zeros(n, n, dtype=torch.long)
 print(x)
+```
+
+## 加载数据
+
+### dataset
+
+**dataset**：提供一种方式获取数据及其label
+
++ 如何获取每一个数据及其label
++ 告诉我们一共有多少数据
+
+### dataloader
+
+**dataloader**：为后面的网络提供不同的数据形式
+
+## 函数
+
++ **os.listdir()** 列出指定目录下所有文件和子目录名称，返回列表类型
++ **os.path.join()** 连接目录与文件名或目录，返回字符串类型
+
+## TensorBoard
+
+```python
+import numpy as np
+from torch.utils.tensorboard import SummaryWriter
+from PIL import Image
+
+writer=SummaryWriter("logs")
+img_path="练手数据集\\train\\ants_image\\0013035.jpg"
+img_PIL=Image.open(img_path)
+img_array=np.array(img_PIL)
+# for i in range(100):
+#     writer.add_scalar("y=2x",2*i,i)
+
+writer.add_image("test",img_array,1,dataformats='HWC')
+writer.close()
 ```
