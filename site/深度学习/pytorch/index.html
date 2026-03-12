@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://Peter-01001.github.io/jinze_note/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/pytorch/">
       
       
-        <link rel="prev" href="../../%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/">
+        <link rel="prev" href="../../408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
       
       
         <link rel="next" href="../%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
@@ -305,6 +305,26 @@
   
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-tabs__link">
+          
+  
+  
+  408
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     
   
   
@@ -482,6 +502,93 @@
       
   
   
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    408
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    408
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -503,10 +610,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -524,8 +631,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -842,6 +949,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        transforms
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1065,6 +1183,11 @@
 <li><strong>os.path.join()</strong> 连接目录与文件名或目录，返回字符串类型</li>
 </ul>
 <h2 id="tensorboard">TensorBoard<a class="headerlink" href="#tensorboard" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>TensorBoard</strong>：可视化工具</li>
+<li><strong>add_scalar()</strong></li>
+<li><strong>add_image()</strong></li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.tensorboard</span><span class="w"> </span><span class="kn">import</span> <span class="n">SummaryWriter</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
@@ -1077,6 +1200,54 @@
 <span class="c1">#     writer.add_scalar(&quot;y=2x&quot;,2*i,i)</span>
 
 <span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="n">img_array</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">dataformats</span><span class="o">=</span><span class="s1">&#39;HWC&#39;</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="transforms">transforms<a class="headerlink" href="#transforms" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">torchvision</span><span class="w"> </span><span class="kn">import</span> <span class="n">transforms</span>
+</code></pre></div>
+<ul>
+<li><strong>totensor()</strong>：将图片转为张量</li>
+<li><strong>normalize()</strong>：将图片归一化</li>
+<li><strong>Compose()</strong>：将多个转换组合</li>
+<li><strong>Randomcrop()</strong>：随机裁剪</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.tensorboard</span><span class="w"> </span><span class="kn">import</span> <span class="n">SummaryWriter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torchvision</span><span class="w"> </span><span class="kn">import</span> <span class="n">transforms</span>
+
+<span class="n">writer</span><span class="o">=</span><span class="n">SummaryWriter</span><span class="p">(</span><span class="s2">&quot;logs&quot;</span><span class="p">)</span>
+<span class="n">img_path</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;data_set/train/ants/0013035.jpg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+
+<span class="c1"># ToTensor</span>
+<span class="n">trans_totensor</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
+<span class="n">img_tensor</span><span class="o">=</span><span class="n">trans_totensor</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;ToTensor&quot;</span><span class="p">,</span><span class="n">img_tensor</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Normalize</span>
+<span class="n">trans_norm</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
+<span class="n">img_norm</span><span class="o">=</span><span class="n">trans_norm</span><span class="p">(</span><span class="n">img_tensor</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Normalize&quot;</span><span class="p">,</span><span class="n">img_norm</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Resize</span>
+<span class="n">trans_resize</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">))</span> <span class="c1"># 第一个是高第二个是宽</span>
+<span class="n">img_resize</span><span class="o">=</span><span class="n">trans_resize</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+<span class="n">img_resize_PIL</span><span class="o">=</span><span class="n">trans_totensor</span><span class="p">(</span><span class="n">img_resize</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Resize&quot;</span><span class="p">,</span><span class="n">img_resize_PIL</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Compose</span>
+<span class="n">trans_resize_2</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span> <span class="c1"># 短边等于这个数值然后按比例缩放</span>
+<span class="n">trans_compose</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">trans_resize_2</span><span class="p">,</span><span class="n">trans_totensor</span><span class="p">])</span>
+<span class="n">img_resize_2</span><span class="o">=</span><span class="n">trans_compose</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Resize&quot;</span><span class="p">,</span><span class="n">img_resize_2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># RandomCrop</span>
+<span class="n">trans_random</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
+<span class="n">trans_crop</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">trans_random</span><span class="p">,</span><span class="n">trans_totensor</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">img_crop</span><span class="o">=</span><span class="n">trans_crop</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;RandomCrop&quot;</span><span class="p">,</span><span class="n">img_crop</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+
 <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 

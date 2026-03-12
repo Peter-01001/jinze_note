@@ -129,6 +129,10 @@ print(x)
 
 ## TensorBoard
 
++ **TensorBoard**：可视化工具
++ **add_scalar()**
++ **add_image()**
+
 ```python
 import numpy as np
 from torch.utils.tensorboard import SummaryWriter
@@ -142,5 +146,57 @@ img_array=np.array(img_PIL)
 #     writer.add_scalar("y=2x",2*i,i)
 
 writer.add_image("test",img_array,1,dataformats='HWC')
+writer.close()
+```
+
+## transforms
+
+```python
+from torchvision import transforms
+```
+
++ **totensor()**：将图片转为张量
++ **normalize()**：将图片归一化
++ **Compose()**：将多个转换组合
++ **Randomcrop()**：随机裁剪
+
+```python
+from PIL import Image
+from torch.utils.tensorboard import SummaryWriter
+from torchvision import transforms
+
+writer=SummaryWriter("logs")
+img_path=Image.open("data_set/train/ants/0013035.jpg")
+print(img_path)
+
+# ToTensor
+trans_totensor=transforms.ToTensor()
+img_tensor=trans_totensor(img_path)
+writer.add_image("ToTensor",img_tensor,1)
+
+# Normalize
+trans_norm=transforms.Normalize([0.5,0.5,0.5],[0.5,0.5,0.5])
+img_norm=trans_norm(img_tensor)
+writer.add_image("Normalize",img_norm,1)
+
+# Resize
+trans_resize=transforms.Resize((512,512)) # 第一个是高第二个是宽
+img_resize=trans_resize(img_path)
+img_resize_PIL=trans_totensor(img_resize)
+writer.add_image("Resize",img_resize_PIL,1)
+
+# Compose
+trans_resize_2=transforms.Resize(512) # 短边等于这个数值然后按比例缩放
+trans_compose=transforms.Compose([trans_resize_2,trans_totensor])
+img_resize_2=trans_compose(img_path)
+writer.add_image("Resize",img_resize_2,1)
+
+# RandomCrop
+trans_random=transforms.RandomCrop(512)
+trans_crop=transforms.Compose([trans_random,trans_totensor])
+for i in range(10):
+    img_crop=trans_crop(img_path)
+    writer.add_image("RandomCrop",img_crop,i)
+
 writer.close()
 ```
