@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -336,6 +336,26 @@
   
   
   深度学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  
+  论文
 
         </a>
       </li>
@@ -2474,6 +2494,93 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    论文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2681,7 +2788,7 @@ FROM&lt;表名或视图名&gt;[,&lt;表名或视图名&gt;…](&lt;SELECT语句&
 <p>在<strong>where</strong>后in某一值集，满足任意一个值则为满足条件</p>
 <h5 id="_48">字符匹配<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h5>
 <p>若字符串中没有通配符则like和=一摸一样</p>
-<div class="code-block"><pre><span></span><code>[NOT]LIKE&#39;&lt;匹配串&gt;&#39; [ESCAPE&#39;&lt;换码字符&gt;&#39;]
+<div class="code-block"><pre><span></span><code>[NOT]LIKE'&lt;匹配串&gt;' [ESCAPE'&lt;换码字符&gt;']
 </code></pre></div>
 
 <h6 id="_49">通配符<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h6>
@@ -2693,7 +2800,7 @@ FROM&lt;表名或视图名&gt;[,&lt;表名或视图名&gt;…](&lt;SELECT语句&
 <p>ESCAPE'\ '表示“\”为换码字符。这样匹配串中紧跟在“\”后面的字符“<em>”不 再具有通配符的含义，转义为普通的“</em> ”字符。</p>
 <div class="code-block"><pre><span></span><code>SELECT*
 FROM Course
-WHERE Cname LIKE &#39;DB\_%i__&#39; ESCAPE&#39;\&#39;;
+WHERE Cname LIKE 'DB\_%i__' ESCAPE'\';
 </code></pre></div>
 
 <h5 id="_50">空值查询<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h5>
@@ -2737,17 +2844,17 @@ GROUP BY Cno;
 <p>自动去重</p>
 <div class="code-block"><pre><span></span><code>SELECT Sno
 FROM SC
-WHERE Cno=&#39;1
+WHERE Cno='1
 UNION
 SELECT Sno
 FROM SC
-WHERE Cno=&#39;2&#39;;
+WHERE Cno='2';
 </code></pre></div>
 
 <h5 id="intersect">intersect 交操作<a class="headerlink" href="#intersect" title="Permanent link">&para;</a></h5>
 <div class="code-block"><pre><span></span><code>SELECT*
 FROM Student
-WHERE Sdept=&#39;CS&#39;
+WHERE Sdept='CS'
 INTERSECT
 SELECT*
 FROM Student
@@ -2757,7 +2864,7 @@ WHERE Sage&lt;=19;
 <h5 id="except">except 差操作<a class="headerlink" href="#except" title="Permanent link">&para;</a></h5>
 <div class="code-block"><pre><span></span><code>SELECT*
 FROM Student
-WHERE Sdept=&#39;CS&#39;
+WHERE Sdept='CS'
 EXCEPT
 SELECT*
 FROM Student
@@ -3042,7 +3149,7 @@ ROLLBACK;
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.hover", "navigation.sections", "toc.integrate", "toc.follow", "navigation.top", "content.code.copy", "content.code.select", "images.rounded", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

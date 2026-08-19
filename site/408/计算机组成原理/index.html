@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -336,6 +336,26 @@
   
   
   深度学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  
+  论文
 
         </a>
       </li>
@@ -1042,8 +1062,47 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算数逻辑单元ALU
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="算数逻辑单元ALU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALU 的功能
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定点数的移位运算
+      
+    </span>
+  </a>
   
 </li>
         
@@ -1219,6 +1278,93 @@
     
   
     神经网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    论文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文笔记
   
 
     
@@ -1541,6 +1687,29 @@
 <li><strong><span class="arithmatex">\(ZF = \overline{S_n + \dots + S_2 + S_1}\)</span></strong>：仅当运算结果所有 bit 全0时，<span class="arithmatex">\(ZF\)</span> 才为1，此时表示运算结果为0。</li>
 <li><strong><span class="arithmatex">\(CF = C_{out} \oplus C_{in} = C_n \oplus C_0\)</span></strong>：反映<strong>无符号数</strong>加减运算是否溢出</li>
 </ul>
+<h4 id="alu">算数逻辑单元ALU<a class="headerlink" href="#alu" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-31.png" /></p>
+<p><img alt="alt text" src="../image-32.png" /></p>
+<h5 id="alu_1">ALU 的功能<a class="headerlink" href="#alu_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>算数运算</strong>：加、减、乘、除等</li>
+<li><strong>逻辑运算</strong>：与、或、非、异或、移位等</li>
+<li>
+<p><strong>其他</strong>：求补码、直送等</p>
+</li>
+<li>
+<p>如果ALU支持k种功能，则控制信号位数应至少为 <span class="arithmatex">\(\lceil \log_2 k \rceil\)</span> 位</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>ALU的运算数、运算结果位数与计算机的机器字长相同</li>
+<li>ZF/OF/SF/CF 标志位，用于表示本次运算结果的特征</li>
+<li>这些标志信息通常会被送入 PSW（程序状态字）寄存器</li>
+<li>注：有的计算机系统把 PSW 寄存器称为“标志寄存器 FR（Flag Register）”</li>
+<li>Cin 是进位输入信号，Cout 是进位输出信号（类似于带标志位的加法器）&emsp;不重要</li>
+</ul>
+<h3 id="_30">定点数的移位运算<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
 
 
 
@@ -1594,7 +1763,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.hover", "navigation.sections", "toc.integrate", "toc.follow", "navigation.top", "content.code.copy", "content.code.select", "images.rounded", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

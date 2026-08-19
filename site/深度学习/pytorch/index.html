@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -336,6 +336,26 @@
   
   
   深度学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  
+  论文
 
         </a>
       </li>
@@ -1088,6 +1108,93 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    论文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%BA%E6%96%87/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1220,14 +1327,14 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.tensorboard</span><span class="w"> </span><span class="kn">import</span> <span class="n">SummaryWriter</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 
-<span class="n">writer</span><span class="o">=</span><span class="n">SummaryWriter</span><span class="p">(</span><span class="s2">&quot;logs&quot;</span><span class="p">)</span>
-<span class="n">img_path</span><span class="o">=</span><span class="s2">&quot;练手数据集</span><span class="se">\\</span><span class="s2">train</span><span class="se">\\</span><span class="s2">ants_image</span><span class="se">\\</span><span class="s2">0013035.jpg&quot;</span>
+<span class="n">writer</span><span class="o">=</span><span class="n">SummaryWriter</span><span class="p">(</span><span class="s2">"logs"</span><span class="p">)</span>
+<span class="n">img_path</span><span class="o">=</span><span class="s2">"练手数据集</span><span class="se">\\</span><span class="s2">train</span><span class="se">\\</span><span class="s2">ants_image</span><span class="se">\\</span><span class="s2">0013035.jpg"</span>
 <span class="n">img_PIL</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
 <span class="n">img_array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img_PIL</span><span class="p">)</span>
 <span class="c1"># for i in range(100):</span>
-<span class="c1">#     writer.add_scalar(&quot;y=2x&quot;,2*i,i)</span>
+<span class="c1">#     writer.add_scalar("y=2x",2*i,i)</span>
 
-<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="n">img_array</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">dataformats</span><span class="o">=</span><span class="s1">&#39;HWC&#39;</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">"test"</span><span class="p">,</span><span class="n">img_array</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">dataformats</span><span class="o">=</span><span class="s1">'HWC'</span><span class="p">)</span>
 <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="transforms">transforms<a class="headerlink" href="#transforms" title="Permanent link">&para;</a></h2>
@@ -1243,38 +1350,38 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.tensorboard</span><span class="w"> </span><span class="kn">import</span> <span class="n">SummaryWriter</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">torchvision</span><span class="w"> </span><span class="kn">import</span> <span class="n">transforms</span>
 
-<span class="n">writer</span><span class="o">=</span><span class="n">SummaryWriter</span><span class="p">(</span><span class="s2">&quot;logs&quot;</span><span class="p">)</span>
-<span class="n">img_path</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;data_set/train/ants/0013035.jpg&quot;</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">=</span><span class="n">SummaryWriter</span><span class="p">(</span><span class="s2">"logs"</span><span class="p">)</span>
+<span class="n">img_path</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"data_set/train/ants/0013035.jpg"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
 
 <span class="c1"># ToTensor</span>
 <span class="n">trans_totensor</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()</span>
 <span class="n">img_tensor</span><span class="o">=</span><span class="n">trans_totensor</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;ToTensor&quot;</span><span class="p">,</span><span class="n">img_tensor</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">"ToTensor"</span><span class="p">,</span><span class="n">img_tensor</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Normalize</span>
 <span class="n">trans_norm</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
 <span class="n">img_norm</span><span class="o">=</span><span class="n">trans_norm</span><span class="p">(</span><span class="n">img_tensor</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Normalize&quot;</span><span class="p">,</span><span class="n">img_norm</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">"Normalize"</span><span class="p">,</span><span class="n">img_norm</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Resize</span>
 <span class="n">trans_resize</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">512</span><span class="p">,</span><span class="mi">512</span><span class="p">))</span> <span class="c1"># 第一个是高第二个是宽</span>
 <span class="n">img_resize</span><span class="o">=</span><span class="n">trans_resize</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
 <span class="n">img_resize_PIL</span><span class="o">=</span><span class="n">trans_totensor</span><span class="p">(</span><span class="n">img_resize</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Resize&quot;</span><span class="p">,</span><span class="n">img_resize_PIL</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">"Resize"</span><span class="p">,</span><span class="n">img_resize_PIL</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Compose</span>
 <span class="n">trans_resize_2</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span> <span class="c1"># 短边等于这个数值然后按比例缩放</span>
 <span class="n">trans_compose</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">trans_resize_2</span><span class="p">,</span><span class="n">trans_totensor</span><span class="p">])</span>
 <span class="n">img_resize_2</span><span class="o">=</span><span class="n">trans_compose</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;Resize&quot;</span><span class="p">,</span><span class="n">img_resize_2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">"Resize"</span><span class="p">,</span><span class="n">img_resize_2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># RandomCrop</span>
 <span class="n">trans_random</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span>
 <span class="n">trans_crop</span><span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">trans_random</span><span class="p">,</span><span class="n">trans_totensor</span><span class="p">])</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">img_crop</span><span class="o">=</span><span class="n">trans_crop</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
-    <span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;RandomCrop&quot;</span><span class="p">,</span><span class="n">img_crop</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s2">"RandomCrop"</span><span class="p">,</span><span class="n">img_crop</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
 
 <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
@@ -1331,7 +1438,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.hover", "navigation.sections", "toc.integrate", "toc.follow", "navigation.top", "content.code.copy", "content.code.select", "images.rounded", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
