@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 920" width="1600" height="920">
+<rect width="1600" height="920" fill="#F7FAFC"/>
+<text x="60" y="65" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="40" fill="#263B50">XY → XYZ：改变预测概率传播时的邻居选择</text>
+<text x="60" y="112" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="25" fill="#263B50">模型只预测窗口中的采样点，其余点要向采样点取预测概率。</text>
+<rect x="60" y="165" width="710" height="530" rx="20" fill="#FFFFFF" stroke="#D1DDE7" stroke-width="2"/>
+<text x="415" y="215" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="30" fill="#22629E">只按 XY 找最近邻</text>
+<polyline points="125,610 710,610" fill="none" stroke="#9AA9B5" stroke-width="3"/>
+<polygon points="710,610 697.3937405670625,616.0895174775573 697.3937405670625,603.9104825224427" fill="#9AA9B5"/>
+<polyline points="125,610 125,255" fill="none" stroke="#9AA9B5" stroke-width="3"/>
+<polygon points="125,255 131.08951747755722,267.60625943293746 118.91048252244278,267.60625943293746" fill="#9AA9B5"/>
+<text x="710" y="642" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="22" fill="#263B50">X</text>
+<text x="105" y="267" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="22" fill="#263B50">Z</text>
+<circle cx="480" cy="290" r="15" fill="#3C9D68"/>
+<text x="380" y="262" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#263B50">树冠采样点</text>
+<circle cx="250" cy="580" r="15" fill="#4B86B5"/>
+<text x="160" y="649" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#263B50">地面采样点</text>
+<circle cx="495" cy="580" r="15" fill="#D68D28"/>
+<text x="470" y="649" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#9E661B">待传播地面点</text>
+<polyline points="495,580 480,290" fill="none" stroke="#D68D28" stroke-width="5"/>
+<polygon points="480,290 486.7325652879658,302.2748753412521 474.569789527907,302.9039844322896" fill="#D68D28"/>
+<polyline points="480,290 480,610" fill="none" stroke="#AAB6C0" stroke-width="2" stroke-dasharray="10 9"/>
+<text x="415" y="673" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="23" fill="#986318">俯视位置接近，可能把树的结果传给地面</text>
+<rect x="830" y="165" width="710" height="530" rx="20" fill="#FFFFFF" stroke="#D1DDE7" stroke-width="2"/>
+<text x="1185" y="215" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="30" fill="#238269">按加权 XYZ 找最近邻</text>
+<polyline points="895,610 1480,610" fill="none" stroke="#9AA9B5" stroke-width="3"/>
+<polygon points="1480,610 1467.3937405670624,616.0895174775573 1467.3937405670624,603.9104825224427" fill="#9AA9B5"/>
+<polyline points="895,610 895,255" fill="none" stroke="#9AA9B5" stroke-width="3"/>
+<polygon points="895,255 901.0895174775573,267.60625943293746 888.9104825224427,267.60625943293746" fill="#9AA9B5"/>
+<text x="1480" y="642" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="22" fill="#263B50">X</text>
+<text x="875" y="267" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="22" fill="#263B50">Z</text>
+<circle cx="1250" cy="290" r="15" fill="#3C9D68"/>
+<text x="1150" y="262" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#263B50">树冠采样点</text>
+<circle cx="1020" cy="580" r="15" fill="#4B86B5"/>
+<text x="930" y="649" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#263B50">地面采样点</text>
+<circle cx="1265" cy="580" r="15" fill="#D68D28"/>
+<text x="1240" y="649" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#9E661B">待传播地面点</text>
+<polyline points="1265,580 1020,580" fill="none" stroke="#238269" stroke-width="5"/>
+<polygon points="1020,580 1032.6062594329376,573.9104825224427 1032.6062594329376,586.0895174775573" fill="#238269"/>
+<polyline points="1265,580 1250,290" fill="none" stroke="#AAB6C0" stroke-width="2" stroke-dasharray="10 9"/>
+<text x="1185" y="673" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="23" fill="#238269">考虑高度后，更倾向于选择地面邻居</text>
+<text x="800" y="770" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="30" fill="#263B50">distance^2 = dx^2 + dy^2 + (1.5 * dz)^2</text>
+<text x="800" y="826" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="26" fill="#263B50">当前 Z_WEIGHT = 1.5；原始点坐标不移动，滑窗仍按 XY 建立。</text>
+<text x="800" y="877" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="22" fill="#596F82">这是一种传播误差的机制示意；实际改善幅度仍需要对比实验确认。</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1390" width="1700" height="1390">
+<rect width="1700" height="1390" fill="#F7FAFC"/>
+<text x="65" y="70" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="42" fill="#263B50">从无人机采集到沟渠测量：完整数据流</text>
+<text x="65" y="112" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="24" fill="#263B50">蓝色：训练数据与权重    绿色：整场景预测与测量    紫色：独立评价分支</text>
+<rect x="575" y="145" width="550" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="850.0" y="185" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">1  无人机原始任务</text>
+<text x="850.0" y="218" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">JPG + LDR + IMU + 定位文件</text>
+<polyline points="850,240 850,273" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="850,273 843.9104825224427,260.39374056706254 856.0895174775573,260.39374056706254" fill="#6C8094"/>
+<rect x="575" y="275" width="550" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="850.0" y="315" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">2  DJI Terra 处理</text>
+<text x="850.0" y="348" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">日志已确认软件与组件版本</text>
+<polyline points="850,370 850,408" fill="none" stroke="#D58B25" stroke-width="3" stroke-dasharray="10 9"/>
+<polygon points="850,408 843.9104825224427,395.39374056706254 856.0895174775573,395.39374056706254" fill="#D58B25"/>
+<rect x="575" y="410" width="550" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="850.0" y="450" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">场景 LAS</text>
+<text x="850.0" y="483" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">渤海米业 / 来胜魔稻团 / 路南</text>
+<text x="1145" y="380" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#986318">任务到现存 LAS 的</text>
+<text x="1145" y="410" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#986318">导出对应仍需补证据</text>
+<polyline points="700,505 700,540 290,540 290,570" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="290,570 283.91048252244275,557.3937405670625 296.08951747755725,557.3937405670625" fill="#6C8094"/>
+<polyline points="1000,505 1000,540 1410,540 1410,570" fill="none" stroke="#238269" stroke-width="3"/>
+<polygon points="1410,570 1403.9104825224429,557.3937405670625 1416.0895174775571,557.3937405670625" fill="#238269"/>
+<rect x="70" y="570" width="440" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="290.0" y="610" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">3  切块 LAS</text>
+<text x="290.0" y="643" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">60 × 60 米，保存小文件</text>
+<polyline points="290,665 290,698" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="290,698 283.91048252244275,685.3937405670625 296.08951747755725,685.3937405670625" fill="#6C8094"/>
+<rect x="70" y="700" width="440" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="290.0" y="740" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">4  人工分类</text>
+<text x="290.0" y="773" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">每一类分别保存 LAS</text>
+<polyline points="290,795 290,828" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="290,828 283.91048252244275,815.3937405670625 296.08951747755725,815.3937405670625" fill="#6C8094"/>
+<rect x="70" y="830" width="440" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="290.0" y="870" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">5  合并并赋标签</text>
+<text x="290.0" y="903" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">每块一个 8 列 NPY / TXT</text>
+<polyline points="290,925 290,958" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="290,958 283.91048252244275,945.3937405670625 296.08951747755725,945.3937405670625" fill="#6C8094"/>
+<rect x="70" y="960" width="440" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="290.0" y="1000" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">6  Dataset 抽样</text>
+<text x="290.0" y="1033" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">临时 8 × 8 窗口，4,096 点</text>
+<polyline points="290,1055 290,1088" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="290,1088 283.91048252244275,1075.3937405670624 296.08951747755725,1075.3937405670624" fill="#6C8094"/>
+<rect x="70" y="1090" width="440" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="290.0" y="1130" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">7  训练与验证</text>
+<text x="290.0" y="1163" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">9 维输入 + 人工标签</text>
+<polyline points="510,1137 600,1137" fill="none" stroke="#6C8094" stroke-width="3"/>
+<polygon points="600,1137 587.3937405670625,1143.0895174775571 587.3937405670625,1130.9104825224429" fill="#6C8094"/>
+<rect x="605" y="1090" width="440" height="95" rx="16" fill="#EAF3FD" stroke="#22629E" stroke-width="2"/>
+<text x="825.0" y="1130" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#22629E">模型权重 best_model.pth</text>
+<text x="825.0" y="1163" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">保存验证 mIoU 最好的参数</text>
+<rect x="1190" y="570" width="440" height="95" rx="16" fill="#EAF7F0" stroke="#238269" stroke-width="2"/>
+<text x="1410.0" y="610" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#238269">8  LAS → NPY</text>
+<text x="1410.0" y="643" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">无标签场景：7 列</text>
+<polyline points="1410,665 1410,698" fill="none" stroke="#238269" stroke-width="3"/>
+<polygon points="1410,698 1403.9104825224429,685.3937405670625 1416.0895174775571,685.3937405670625" fill="#238269"/>
+<rect x="1190" y="700" width="440" height="95" rx="16" fill="#EAF7F0" stroke="#238269" stroke-width="2"/>
+<text x="1410.0" y="740" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#238269">9  滑窗预测 + XYZ 传播</text>
+<text x="1410.0" y="773" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">采样预测，再传播给窗口全部点</text>
+<polyline points="1410,795 1410,828" fill="none" stroke="#238269" stroke-width="3"/>
+<polygon points="1410,828 1403.9104825224429,815.3937405670625 1416.0895174775571,815.3937405670625" fill="#238269"/>
+<rect x="1190" y="830" width="440" height="95" rx="16" fill="#EAF7F0" stroke="#238269" stroke-width="2"/>
+<text x="1410.0" y="870" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#238269">整场景预测 TXT</text>
+<text x="1410.0" y="903" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">XYZ + RGB + 强度 + 类别 + 置信度</text>
+<polyline points="1045,1138 1110,1138 1110,748 1190,748" fill="none" stroke="#238269" stroke-width="3"/>
+<polygon points="1190,748 1177.3937405670624,754.0895174775573 1177.3937405670624,741.9104825224427" fill="#238269"/>
+<rect x="1190" y="960" width="440" height="95" rx="16" fill="#EAF7F0" stroke="#238269" stroke-width="2"/>
+<text x="1410.0" y="1000" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#238269">10  着色查看 PLY</text>
+<text x="1410.0" y="1033" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">可选：用 CloudCompare 查看</text>
+<polyline points="1410,925 1410,958" fill="none" stroke="#238269" stroke-width="3"/>
+<polygon points="1410,958 1403.9104825224429,945.3937405670625 1416.0895174775571,945.3937405670625" fill="#238269"/>
+<rect x="1190" y="1130" width="440" height="95" rx="16" fill="#EAF7F0" stroke="#238269" stroke-width="2"/>
+<text x="1410.0" y="1170" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#238269">12  沟渠几何测量</text>
+<text x="1410.0" y="1203" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">直接读取预测 TXT，提取标签 4 / 5</text>
+<polyline points="1630,877 1660,877 1660,1178 1630,1178" fill="none" stroke="#238269" stroke-width="3"/>
+<polygon points="1630,1178 1642.6062594329376,1171.9104825224429 1642.6062594329376,1184.0895174775571" fill="#238269"/>
+<rect x="605" y="1260" width="440" height="95" rx="16" fill="#F1ECFB" stroke="#7D56B3" stroke-width="2"/>
+<text x="825.0" y="1300" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="27" fill="#7D56B3">11  独立测试与矩阵绘图</text>
+<text x="825.0" y="1333" text-anchor="middle" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#466175">带标签测试 NPY + 权重 → 指标</text>
+<polyline points="825,1185 825,1258" fill="none" stroke="#7D56B3" stroke-width="3"/>
+<polygon points="825,1258 818.9104825224427,1245.3937405670624 831.0895174775573,1245.3937405670624" fill="#7D56B3"/>
+<polyline points="70,877 35,877 35,1307 605,1307" fill="none" stroke="#7D56B3" stroke-width="3"/>
+<polygon points="605,1307 592.3937405670625,1313.0895174775571 592.3937405670625,1300.9104825224429" fill="#7D56B3"/>
+<text x="1080" y="1307" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="22" fill="#238269">测量不依赖 PLY 或混淆矩阵图片。</text>
+<text x="1080" y="1345" text-anchor="start" font-family="Hiragino Sans GB,Microsoft YaHei,sans-serif" font-size="20" fill="#263B50">完整数据路径和脚本路径见笔记正文。</text>
+</svg>

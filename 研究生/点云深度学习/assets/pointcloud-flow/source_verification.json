@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-22",
+  "tile_sources": [
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/001.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 830944,
+      "xyz_found_in_source": 830944
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/002.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 1031017,
+      "xyz_found_in_source": 1031017
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/003.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 1107277,
+      "xyz_found_in_source": 1107277
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/004.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 431280,
+      "xyz_found_in_source": 431280
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/005.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 1131658,
+      "xyz_found_in_source": 1131658
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/006.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 438349,
+      "xyz_found_in_source": 438349
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/007.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 1052166,
+      "xyz_found_in_source": 1052166
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/008.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 468511,
+      "xyz_found_in_source": 468511
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/009.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 1059121,
+      "xyz_found_in_source": 1059121
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/010.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 449452,
+      "xyz_found_in_source": 449452
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/011.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 1143369,
+      "xyz_found_in_source": 1143369
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/012.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/渤海米业.las",
+      "points": 433769,
+      "xyz_found_in_source": 433769
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/013.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/来胜魔稻团.las",
+      "points": 412815,
+      "xyz_found_in_source": 412815
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/014.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/来胜魔稻团.las",
+      "points": 407215,
+      "xyz_found_in_source": 407215
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/015.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/来胜魔稻团.las",
+      "points": 418176,
+      "xyz_found_in_source": 418176
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/016.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/来胜魔稻团.las",
+      "points": 471343,
+      "xyz_found_in_source": 471343
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/017.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/来胜魔稻团.las",
+      "points": 501339,
+      "xyz_found_in_source": 501339
+    },
+    {
+      "tile": "/Volumes/高标准农田/点云/雷达数据集/切割结果/018.las",
+      "source": "/Volumes/高标准农田/点云/雷达数据集/来胜魔稻团.las",
+      "points": 425742,
+      "xyz_found_in_source": 425742
+    }
+  ],
+  "block009_conflict": {
+    "background": "/Volumes/高标准农田/点云/雷达数据集/block_009/背景.las",
+    "branch": "/Volumes/高标准农田/点云/雷达数据集/block_009/支渠.las",
+    "background_points": 2216,
+    "branch_points": 2216,
+    "xyz_intersection": 2216,
+    "same_order_xyz": true,
+    "same_rgb_intensity": true
+  },
+  "lunan_las_npy": {
+    "source": "/Volumes/高标准农田/点云/雷达数据集/路南.las",
+    "npy": "/Volumes/高标准农田/点云/雷达数据集/路南.npy",
+    "rows": 13648663,
+    "xyz_all_rows_equal_float32_source": true,
+    "rgb_all_rows_match_div257": true,
+    "intensity_all_rows_equal": true,
+    "max_abs_xyz_error_m": [
+      0.031199999968521297,
+      0.25,
+      3.8085937603682396e-06
+    ],
+    "source_scale": [
+      0.0001,
+      0.0001,
+      0.0001
+    ]
+  }
+}
