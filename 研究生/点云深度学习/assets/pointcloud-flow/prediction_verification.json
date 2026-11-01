@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-22",
+  "scope": "Full line counts; first and last 512 rows coordinate/color sampling only; not proof of exact code version or checkpoint",
+  "txt": {
+    "path": "/Volumes/高标准农田/点云/雷达数据集/路南.txt",
+    "header": [
+      "x y z r g b intensity pred_label confidence"
+    ],
+    "data_rows": 13648663,
+    "first_512_xyz_match_npy": true,
+    "last_512_xyz_match_npy": true,
+    "columns": 9
+  },
+  "ply": {
+    "path": "/Volumes/高标准农田/点云/雷达数据集/路南.ply",
+    "header": [
+      "ply",
+      "format ascii 1.0",
+      "element vertex 13648663",
+      "property float x",
+      "property float y",
+      "property float z",
+      "property uchar red",
+      "property uchar green",
+      "property uchar blue",
+      "end_header"
+    ],
+    "data_rows": 13648663,
+    "first_512_xyz_match_npy": true,
+    "last_512_xyz_match_npy": true,
+    "columns": 6,
+    "first_512_colors_match_txt_labels": true,
+    "last_512_colors_match_txt_labels": true
+  }
+}

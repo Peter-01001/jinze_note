@@ -1,0 +1,582 @@
+{
+  "date": "2026-10-22",
+  "method": "LAS 1.2 format 3 read-only XYZ multiset membership; label counts; 256 evenly spaced rows per class compared with current converter",
+  "rows": [
+    {
+      "block": "001",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/001.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_001",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_001.npy",
+      "tile_points": 830944,
+      "classified_points": 829565,
+      "npy_rows": 829565,
+      "classified_xyz_in_tile": 829565,
+      "unique_classified_xyz": 829565,
+      "difference_tile_minus_classified": 1379,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        124210,
+        362959,
+        55858,
+        47317,
+        93727,
+        6509,
+        138985
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "002",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/002.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_002",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_002.npy",
+      "tile_points": 1031017,
+      "classified_points": 1030286,
+      "npy_rows": 1030286,
+      "classified_xyz_in_tile": 1030286,
+      "unique_classified_xyz": 1030286,
+      "difference_tile_minus_classified": 731,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        102242,
+        592984,
+        65289,
+        38829,
+        78178,
+        1950,
+        150814
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "003",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/003.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_003",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_003.npy",
+      "tile_points": 1107277,
+      "classified_points": 1106913,
+      "npy_rows": 1106913,
+      "classified_xyz_in_tile": 1106913,
+      "unique_classified_xyz": 1106913,
+      "difference_tile_minus_classified": 364,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        125413,
+        650072,
+        60933,
+        39496,
+        83027,
+        4123,
+        143849
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "004",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/004.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_004",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_004.npy",
+      "tile_points": 431280,
+      "classified_points": 431280,
+      "npy_rows": 431280,
+      "classified_xyz_in_tile": 431280,
+      "unique_classified_xyz": 431280,
+      "difference_tile_minus_classified": 0,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        41478,
+        0,
+        0,
+        0,
+        0,
+        11618,
+        378184
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "005",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/005.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_005",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_005.npy",
+      "tile_points": 1131658,
+      "classified_points": 1130859,
+      "npy_rows": 1130859,
+      "classified_xyz_in_tile": 1130859,
+      "unique_classified_xyz": 1130859,
+      "difference_tile_minus_classified": 799,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        127322,
+        678594,
+        67762,
+        41394,
+        93003,
+        4392,
+        118392
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "006",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/006.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_006",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_006.npy",
+      "tile_points": 438349,
+      "classified_points": 438349,
+      "npy_rows": 438349,
+      "classified_xyz_in_tile": 438349,
+      "unique_classified_xyz": 438349,
+      "difference_tile_minus_classified": 0,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        36814,
+        0,
+        0,
+        0,
+        0,
+        8865,
+        392670
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "007",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/007.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_007",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_007.npy",
+      "tile_points": 1052166,
+      "classified_points": 1048539,
+      "npy_rows": 1048539,
+      "classified_xyz_in_tile": 1048539,
+      "unique_classified_xyz": 1048539,
+      "difference_tile_minus_classified": 3627,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        121746,
+        600400,
+        67989,
+        40072,
+        93650,
+        2517,
+        122165
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "008",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/008.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_008",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_008.npy",
+      "tile_points": 468511,
+      "classified_points": 468511,
+      "npy_rows": 468511,
+      "classified_xyz_in_tile": 468511,
+      "unique_classified_xyz": 468511,
+      "difference_tile_minus_classified": 0,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        39395,
+        0,
+        0,
+        0,
+        0,
+        10454,
+        418662
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "009",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/009.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_009",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_009.npy",
+      "tile_points": 1059121,
+      "classified_points": 886535,
+      "npy_rows": 886535,
+      "classified_xyz_in_tile": 886535,
+      "unique_classified_xyz": 884319,
+      "difference_tile_minus_classified": 172586,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        2216,
+        602384,
+        65033,
+        44597,
+        91185,
+        2216,
+        78904
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "010",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/010.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_010",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_010.npy",
+      "tile_points": 449452,
+      "classified_points": 449452,
+      "npy_rows": 449452,
+      "classified_xyz_in_tile": 449452,
+      "unique_classified_xyz": 449452,
+      "difference_tile_minus_classified": 0,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        27533,
+        0,
+        0,
+        0,
+        0,
+        13187,
+        408732
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "011",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/011.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_011",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_011.npy",
+      "tile_points": 1143369,
+      "classified_points": 1142113,
+      "npy_rows": 1142113,
+      "classified_xyz_in_tile": 1142113,
+      "unique_classified_xyz": 1142113,
+      "difference_tile_minus_classified": 1256,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        124438,
+        703230,
+        70513,
+        36870,
+        89840,
+        2759,
+        114463
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "012",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/012.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_012",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_012.npy",
+      "tile_points": 433769,
+      "classified_points": 433769,
+      "npy_rows": 433769,
+      "classified_xyz_in_tile": 433769,
+      "unique_classified_xyz": 433769,
+      "difference_tile_minus_classified": 0,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        32669,
+        0,
+        0,
+        0,
+        0,
+        12685,
+        388415
+      ],
+      "origin": [
+        433000.0,
+        4519000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "013",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/013.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_013",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_013.npy",
+      "tile_points": 412815,
+      "classified_points": 412651,
+      "npy_rows": 412651,
+      "classified_xyz_in_tile": 412651,
+      "unique_classified_xyz": 412651,
+      "difference_tile_minus_classified": 164,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        66624,
+        24581,
+        52184,
+        0,
+        45296,
+        7401,
+        216565
+      ],
+      "origin": [
+        522000.0,
+        4607000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "014",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/014.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_014",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_014.npy",
+      "tile_points": 407215,
+      "classified_points": 406991,
+      "npy_rows": 406991,
+      "classified_xyz_in_tile": 406991,
+      "unique_classified_xyz": 406991,
+      "difference_tile_minus_classified": 224,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        71449,
+        25589,
+        51619,
+        5424,
+        40594,
+        5625,
+        206691
+      ],
+      "origin": [
+        522000.0,
+        4607000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "015",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/015.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_015",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_015.npy",
+      "tile_points": 418176,
+      "classified_points": 417756,
+      "npy_rows": 417756,
+      "classified_xyz_in_tile": 417756,
+      "unique_classified_xyz": 417756,
+      "difference_tile_minus_classified": 420,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        84701,
+        29475,
+        55114,
+        6702,
+        37935,
+        5458,
+        198371
+      ],
+      "origin": [
+        522000.0,
+        4607000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "016",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/016.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_016",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_016.npy",
+      "tile_points": 471343,
+      "classified_points": 470773,
+      "npy_rows": 470773,
+      "classified_xyz_in_tile": 470773,
+      "unique_classified_xyz": 470773,
+      "difference_tile_minus_classified": 570,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        69369,
+        72106,
+        56073,
+        0,
+        44524,
+        6417,
+        222284
+      ],
+      "origin": [
+        522000.0,
+        4607000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "017",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/017.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_017",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_017.npy",
+      "tile_points": 501339,
+      "classified_points": 500957,
+      "npy_rows": 500957,
+      "classified_xyz_in_tile": 500957,
+      "unique_classified_xyz": 500957,
+      "difference_tile_minus_classified": 382,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        69200,
+        115710,
+        55286,
+        0,
+        45097,
+        4470,
+        211194
+      ],
+      "origin": [
+        522000.0,
+        4607000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "block": "018",
+      "tile_path": "/Volumes/高标准农田/点云/雷达数据集/切割结果/018.las",
+      "annotation_dir": "/Volumes/高标准农田/点云/雷达数据集/block_018",
+      "npy_path": "/Volumes/高标准农田/点云/雷达数据集/merged_output/block_018.npy",
+      "tile_points": 425742,
+      "classified_points": 425648,
+      "npy_rows": 425648,
+      "classified_xyz_in_tile": 425648,
+      "unique_classified_xyz": 425648,
+      "difference_tile_minus_classified": 94,
+      "npy_samples_match_current_converter": true,
+      "label_counts": [
+        83145,
+        39506,
+        52598,
+        0,
+        38023,
+        10086,
+        202290
+      ],
+      "origin": [
+        522000.0,
+        4607000.0,
+        0.0
+      ],
+      "scale": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    }
+  ]
+}
